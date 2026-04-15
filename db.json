@@ -1,0 +1,472 @@
+{
+  "men": [
+    {
+      "id": 1,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe1.webp?raw=true",
+      "title": "Casual Shoes for Men in Black and Grey | Lifestyle Shoes",
+      "price": "1392.00"
+    },
+    {
+      "id": 2,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe2.webp?raw=true",
+      "title": "Sports Shoes for Men in White | Athleisure Shoes",
+      "price": "1485.00"
+    },
+    {
+      "id": 3,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe3.webp?raw=true",
+      "title": "Sports Shoes for Men in Black | Athleisure Shoes",
+      "price": "1485.00"
+    },
+    {
+      "id": 4,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe4.webp?raw=true",
+      "title": "Sports Shoes for Men in Black | Athleisure Shoes",
+      "price": "1328.00"
+    },
+    {
+      "id": 5,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe5.webp?raw=true",
+      "title": "Basketball Shoes for Men | Cultured Round-Toe Shape & Cushioning Technology",
+      "price": "2910.00"
+    },
+    {
+      "id": 6,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe6.webp?raw=true",
+      "title": "Lifestyle Casual Shoes for Men | Classic Rounded Toe, Soothing Insole & Impact-Resistant Comfort",
+      "price": "2970.00"
+    },
+    {
+      "id": 7,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe7.webp?raw=true",
+      "title": "Sports Shoes for Men in Blue | Athleisure Shoes",
+      "price": "1424.00"
+    },
+    {
+      "id": 8,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe8.webp?raw=true",
+      "title": "Sports Shoes for Men in Blue and Green | Athleisure Shoes",
+      "price": "1395.00"
+    },
+    {
+      "id": 9,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe9.webp?raw=true",
+      "title": "Sports Shoes for Men in Navy | Athleisure Shoes",
+      "price": "1485.00"
+    },
+    {
+      "id": 10,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe10.webp?raw=true",
+      "title": "Sports Shoes for Men in Black | Athleisure Shoes",
+      "price": "1360.00"
+    },
+    {
+      "id": 11,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt1.webp?raw=true",
+      "title": "T Shirts for Men in White | Jacquard Collar Polo T Shirt",
+      "price": "1240.00"
+    },
+    {
+      "id": 12,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt2.webp?raw=true",
+      "title": "Polo T Shirts for Men in Deep Teal | Classic Polo T Shirts",
+      "price": "1230.00"
+    },
+    {
+      "id": 13,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt3.webp?raw=true",
+      "title": "Polo T Shirts for Men in White | Classic Polo T Shirts",
+      "price": "1230.00"
+    },
+    {
+      "id": 14,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt4.webp?raw=true",
+      "title": "Polo T Shirts for Men in Beige | Classic Polo T Shirts",
+      "price": "1170.00"
+    },
+    {
+      "id": 15,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt5.webp?raw=true",
+      "title": "Polo T Shirts for Men in Stone Blue | Classic Polo T Shirts",
+      "price": "1170.00"
+    },
+    {
+      "id": 16,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt6.webp?raw=true",
+      "title": "T Shirts for Men in Charcoal Grey | Jacquard Polo T Shirt",
+      "price": "1200.00"
+    },
+    {
+      "id": 17,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt7.webp?raw=true",
+      "title": "Polo T Shirts for Men in Forest Green | Classic Polo T Shirts",
+      "price": "1230.00"
+    },
+    {
+      "id": 18,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt8.webp?raw=true",
+      "title": "Polo T Shirts for Men in Black | Classic Polo T Shirts",
+      "price": "1230.00"
+    },
+    {
+      "id": 19,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt9.webp?raw=true",
+      "title": "Polo T Shirts for Men in White | Classic Polo T Shirts",
+      "price": "1230.00"
+    },
+    {
+      "id": 20,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/T-Shirts/T-Shirt10.webp?raw=true",
+      "title": "Polo T Shirts for Men in Burnt Orange | Classic Polo T Shirts",
+      "price": "1230.00"
+    }
+  ],
+  "women": [
+    {
+      "id": 21,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_10img.webp?raw=true",
+      "title": "Athleisure Sports Shoes for Women",
+      "price": "1,598.00"
+    },
+    {
+      "id": 22,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_11img.webp?raw=true",
+      "title": "ETPU Athleisure Shoes for Women",
+      "price": "1,598.00"
+    },
+    {
+      "id": 23,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_12img.webp?raw=true",
+      "title": "Women’s Athleisure Drift+ Sports Shoes",
+      "price": "2,070.00"
+    },
+    {
+      "id": 24,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_13img.webp?raw=true",
+      "title": "Black Padded Jacket for Women",
+      "price": "1,358.00"
+    },
+    {
+      "id": 25,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_14img.webp?raw=true",
+      "title": "Women's Sliders",
+      "price": "600.00"
+    },
+    {
+      "id": 26,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_15img.webp?raw=true",
+      "title": "Women's Casual Shoes",
+      "price": "1,122.00"
+    },
+    {
+      "id": 27,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_16img.webp?raw=true",
+      "title": "Athleisure Sports Shoes for Women",
+      "price": "1,360.00"
+    },
+    {
+      "id": 28,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_17img.webp?raw=true",
+      "title": "T-Shirts for Women in Black",
+      "price": "689.00"
+    },
+    {
+      "id": 29,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_18img.webp?raw=true",
+      "title": "T-Shirts for Women in Black",
+      "price": "1,199.00"
+    },
+    {
+      "id": 30,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_19img.webp?raw=true",
+      "title": "Navy and White Polo T-Shirt for Women",
+      "price": "1,079.00"
+    },
+    {
+      "id": 31,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_20img.webp?raw=true",
+      "title": "Black Pants for Women",
+      "price": "1,529.00"
+    },
+    {
+      "id": 32,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_20img.webp?raw=true",
+      "title": "Black Pants for Women",
+      "price": "1,529.00"
+    },
+    {
+      "id": 33,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_2img.webp?raw=true",
+      "title": "Pink & White Sneakers for Women",
+      "price": "1,003.00"
+    },
+    {
+      "id": 34,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_3img.webp?raw=true",
+      "title": "Polo T Shirts for Women in Red",
+      "price": "1,020.00"
+    },
+    {
+      "id": 35,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_4img.webp?raw=true",
+      "title": "Shirts for Women in White",
+      "price": "1,110.00"
+    },
+    {
+      "id": 36,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_6img.webp?raw=true",
+      "title": "Shirts for Women in Pastel Green",
+      "price": "1,110.00"
+    },
+    {
+      "id": 37,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_8img.webp?raw=true",
+      "title": "Shirts for Women in Dusty Olive",
+      "price": " 1,500.00"
+    },
+    {
+      "id": 38,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_9img.webp?raw=true",
+      "title": "Polo T-Shirts for Women in Off White",
+      "price": "990.00"
+    }
+  ],
+  "ozark": [
+    {
+      "id": 39,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe1.webp?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 40,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe2.webp?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 41,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe3.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 42,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe4.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 43,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe5.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 44,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe6.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 45,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe7.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 46,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe8.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 47,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe9.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 48,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe10.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 49,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe11.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 50,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe12.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 51,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe13.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 52,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe14.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 53,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe15.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 54,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe16.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 55,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe17.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 56,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe18.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 57,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe19.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    },
+    {
+      "id": 58,
+      "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Ozark/Ozark_Shoe20.jpg?raw=true",
+      "title": "",
+      "price": "1230.00"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 59,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img1.webp?raw=true",
+      "title": "Men's Black Formal Leather Belt",
+      "price": "869.00"
+    },
+    {
+      "id": 60,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img2.webp?raw=true",
+      "title": "Men's Brown Leather Belt",
+      "price": "1,019.00"
+    },
+    {
+      "id": 61,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img3.webp?raw=true",
+      "title": "Black Grey Genuine Leather Wallet for Men",
+      "price": "899.00"
+    },
+    {
+      "id": 62,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img4.webp?raw=true",
+      "title": "Brown 8 Wheels Trolley Bag Set of 3",
+      "price": "14,395.00"
+    },
+    {
+      "id": 63,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img6.webp?raw=true",
+      "title": "Solid Baseball Unisex Cap for Men",
+      "price": " 599.00"
+    },
+    {
+      "id": 64,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img7.webp?raw=true",
+      "title": "16 Inch Laptop Backpack for Men ",
+      "price": "2,299.00"
+    },
+    {
+      "id": 65,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img8.webp?raw=true",
+      "title": "Brown 8 Wheels Trolley Bag Set of 2",
+      "price": "7,798.00"
+    },
+    {
+      "id": 66,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img9.webp?raw=true",
+      "title": "Gunmetal Black 8 Wheels Trolley Bag Set of",
+      "price": " 9,897.00"
+    },
+    {
+      "id": 67,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img10.webp?raw=true",
+      "title": "100L Hard Luggage Trolley Bag for Travel",
+      "price": "6,598.00"
+    },
+    {
+      "id": 68,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img11.webp?raw=true",
+      "title": "Navy and White Polo T-Shirt for Women",
+      "price": "1,079.00"
+    },
+    {
+      "id": 69,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img12.webp?raw=true",
+      "title": "60L Hard Luggage Trolley Bag for Travel",
+      "price": " 4,499.00"
+    },
+    {
+      "id": 70,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img13.webp?raw=true",
+      "title": "100L Hard Luggage Trolley Bag for Travel",
+      "price": "6,598.00"
+    },
+    {
+      "id": 71,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img14.webp?raw=true",
+      "title": "Men's Genuine Leather Wallet and Belt Combo Gift Set",
+      "price": "1,919.00"
+    },
+    {
+      "id": 72,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img15.webp?raw=true",
+      "title": "Aura Eau De Parfum for Women 50ML",
+      "price": "899.00"
+    },
+    {
+      "id": 73,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img16.webp?raw=true",
+      "title": "100L Hard Luggage Trolley Bag for Travel",
+      "price": "6,598"
+    },
+    {
+      "id": 74,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img17.jpg?raw=true",
+      "title": "Men's Brown Genuine Leather Wallet & Belt Combo Gift Set",
+      "price": "1,709.00"
+    },
+    {
+      "id": 75,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img18.webp?raw=true",
+      "title": "Black Solid Baseball Unisex Cap for Men",
+      "price": " 569.00"
+    },
+    {
+      "id": 76,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img19.webp?raw=true",
+      "title": "Solid Baseball Unisex Cap for Men",
+      "price": "599.00"
+    },
+    {
+      "id": 77,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/a_img20.webp?raw=true",
+      "title": "Brown Men's Leather Wallet",
+      "price": "959.00"
+    }
+  ]
+}
