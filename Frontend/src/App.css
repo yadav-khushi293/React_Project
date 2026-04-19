@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .corusel {
   position: relative;
   width: 100%;
@@ -9,6 +15,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  will-change: transform;
 }
 
 /* Buttons */
