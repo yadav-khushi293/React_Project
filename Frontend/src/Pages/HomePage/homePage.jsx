@@ -127,52 +127,64 @@ return (
     {/* Collection */}
 
     <div className="collection">
-      <img
-        src="/Utilis/Collection1.webp"
-        alt="Collection Image 1"
-        className="collection_img1"
-      />
-      <img
-        src="/Utilis/Collection2.webp"
-        alt="Collection Image 2"
-        className="collection_img2"
-      />
+      <div className="collection_img1">
+        <img src="/Utilis/Collection1.webp" alt="Collection Image 1" />
+      </div>
+      <div className="collection_img2">
+        <img src="/Utilis/Collection2.webp" alt="Collection Image 2" />
+      </div>
     </div>
 
     {/* Trending */}
 
     <div className="trending">
-      <h5>Trending Now</h5>
-      <img
-        src="/Utilis/Scroll_Image1.jpg"
-        alt="Trending Image 1"
-        className="trending_img1"
-      />
-      <img
-        src="/Utilis/Scroll_Image2.jpg"
-        alt="Trending Image 2"
-        className="trending_img2"
-      />
-      <img
-        src="/Utilis/Scroll_Image3.jpg"
-        alt="Trending Image 3"
-        className="trending_img3"
-      />
-      <img
-        src="/Utilis/Scroll_Image4.jpg"
-        alt="Trending Image 4"
-        className="trending_img4"
-      />
-      <img
-        src="/Utilis/Scroll_Image5.jpg"
-        alt="Trending Image 5"
-        className="trending_img5"
-      />
-      <img
-        src="/Utilis/Scroll_Image6.jpg"
-        alt="Trending Image 6"
-        className="trending_img6"
-      />
+      <div className="trending_div1">
+        <h5>Trending Now</h5>
+        <div className="trending_category">
+          <h6 className="shoes">Shoes</h6>
+          <h6 className="shirts">Shirts</h6>
+          <h6 className="acessories">Acessories</h6>
+        </div>
+      </div>
+
+      <div className="trending_div2">
+        <img
+          src="/Utilis/Scroll_Image1.jpg"
+          alt="Trending Image 1"
+          className="trending_img1"
+        />
+        <img
+          src="/Utilis/Scroll_Image2.jpg"
+          alt="Trending Image 2"
+          className="trending_img2"
+        />
+        <img
+          src="/Utilis/Scroll_Image3.jpg"
+          alt="Trending Image 3"
+          className="trending_img3"
+        />
+        <img
+          src="/Utilis/Scroll_Image4.jpg"
+          alt="Trending Image 4"
+          className="trending_img4"
+        />
+        <img
+          src="/Utilis/Scroll_Image5.jpg"
+          alt="Trending Image 5"
+          className="trending_img5"
+        />
+        <img
+          src="/Utilis/Scroll_Image6.jpg"
+          alt="Trending Image 6"
+          className="trending_img6"
+        />
+      </div>
+      <div className="trending_arrow">
+        <hr className="hr_25" />
+        <hr className="hr_67" />
+        <i className="bi bi-chevron-left"></i>
+        <i className="bi bi-chevron-right"></i>
+      </div>
     </div>
 
     {/* Scroll Images */}
@@ -210,7 +222,11 @@ return (
       />
     </div>
 
-    <video src="/Utilis/795cffa3c24f44c78e580a67427a917f.SD-480p-1.0Mbps-80004966.mp4"></video>
+    <video
+      src="/Utilis/795cffa3c24f44c78e580a67427a917f.SD-480p-1.0Mbps-80004966.mp4"
+      autoPlay
+      className="video"
+    ></video>
 
     {/* Last Banner */}
 
