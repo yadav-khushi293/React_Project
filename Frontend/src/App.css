@@ -7,17 +7,125 @@
   font-family: "Lato", sans-serif;
 }
 
+/* Navbar */
+
+.navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 21;
+}
+
+.navbar_div1{
+  background-color: #c41d31;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 271px;
+  padding: 15px 121px;
+}
+
+.navbar_child1{
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  cursor: pointer;
+}
+
+.navbar_child2{
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: all 0.25s ease-in-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation.left:hover::after {
+  transform-origin: bottom left;
+}
+
+.navbar_div2{
+  padding: 25px 0;
+  background: #fff;
+}
+
+.navbar_child3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.navbar_child3>i{
+  display: none;
+}
+
+.navbar_child4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.search{
+  border: 1px solid #e5e5e5;
+  padding: 11px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.search>input{
+  border: transparent;
+}
+
+.logo_img{
+  height: auto;
+  max-width: 100%;
+}
+
+/* Corusel */
+
 .corusel {
+  margin-top: 49px;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 631px;
   overflow: hidden;
 }
 
 .corusel img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   will-change: transform;
 }
 
@@ -45,7 +153,7 @@
 
 .home_page_img{
   width: 100%;
-  margin: 31px 0;
+  margin: 25px 0;
 }
 
 /* Category Section */
@@ -233,23 +341,70 @@
 }
 
 /* Scroll Images */
-
+ 
 .scroll{
-  display: flex;
-  margin: 0  25px;
-  gap: 15px;
+  margin: 0;
   width: 100%;
   margin-bottom: 21px;
   overflow: hidden;
 }
 
-.scroll>img{
+.scroll_track{
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: scrollAnim 21s linear infinite;
+}
+
+/* Animation */
+
+@keyframes scrollAnim{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+.scroll_track:hover{
+  animation-play-state: paused;
+}
+
+.scroll_track>img{
   width: 100%;
 height: 530px;
 }
 
-.video{
+/* Video */
+
+.video_container {
+  position: relative;
+  cursor: pointer;
+}
+
+.video {
   width: 100%;
-  margin: 0 25px;
-  overflow: hidden;
+  display: block;
+}
+
+/* Center Play Button */
+
+.play_btn {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-52%, -50%);
+  font-size: 41px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 15px 25px;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.last_banner{
+  width: 100%;
+  margin-top: 25px;
 }
