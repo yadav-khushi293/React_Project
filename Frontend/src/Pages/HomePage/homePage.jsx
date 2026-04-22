@@ -100,11 +100,13 @@ export const HomePage = () => {
 
       <div className="category">
         <div className="category_1">
-          <img
-            src="/Utilis/Category1.webp"
-            alt="Category Image 1"
-            className="category_img1"
-          />
+          <div className="category_img1">
+            <img
+              src="/Utilis/Category1.webp"
+              alt="Category Image 1"
+              className="category_img1"
+            />
+          </div>
 
           <div className="category_text">
             <p className="category_p">Footwear</p>
@@ -113,11 +115,13 @@ export const HomePage = () => {
         </div>
 
         <div className="category_2">
-          <img
-            src="/Utilis/Category2.webp"
-            alt="Category Image 2"
-            className="category_img2"
-          />
+          <div className="category_img2">
+            <img
+              src="/Utilis/Category2.webp"
+              alt="Category Image 2"
+              className="category_img2"
+            />
+          </div>
 
           <div className="category_text">
             <p className="category_p">Clothing</p>
@@ -126,11 +130,13 @@ export const HomePage = () => {
         </div>
 
         <div className="category_3">
-          <img
-            src="/Utilis/Category3..jpg"
-            alt="Category Image 3"
-            className="category_img3"
-          />
+          <div className="category_img3">
+            <img
+              src="/Utilis/Category3..jpg"
+              alt="Category Image 3"
+              className="category_img3"
+            />
+          </div>
 
           <div className="category_text">
             <p className="category_p">New Arrival</p>
@@ -139,11 +145,13 @@ export const HomePage = () => {
         </div>
 
         <div className="category_4">
-          <img
-            src="/Utilis/Category4.webp"
-            alt="Category Image 4"
-            className="category_img4"
-          />
+          <div className="category_img4">
+            <img
+              src="/Utilis/Category4.webp"
+              alt="Category Image 4"
+              className="category_img4"
+            />
+          </div>
 
           <div className="category_text">
             <p className="category_p">Accesories</p>
