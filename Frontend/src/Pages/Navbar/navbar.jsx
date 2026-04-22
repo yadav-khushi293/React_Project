@@ -18,7 +18,7 @@ export const Navbar = () => {
 
       <div className="navbar_div2">
         <div className="navbar_child3">
-          <i class="bi bi-list"></i>
+          <i className="bi bi-list"></i>
           <img
             src="/Utilis/Logo_Website.webp"
             alt="Website Logo"
@@ -27,12 +27,33 @@ export const Navbar = () => {
           <div className="navbar_child4">
             <div className="search">
               <input type="search" placeholder="What are you looking for?" />
-              <i class="bi bi-search"></i>
+              <i className="bi bi-search"></i>
             </div>
-            <i class="bi bi-person"></i>
-            <i class="bi bi-bag"></i>
-            <i class="bi bi-heart"></i>
+            <i className="bi bi-person"></i>
+            <i className="bi bi-bag"></i>
+            <i className="bi bi-heart"></i>
           </div>
+        </div>
+
+        <div className="navbar_child5">
+          <ul className="navbar_category">
+            <li className="men hover-underline-animation">
+              Men
+              <i className="bi bi-chevron-down"></i>
+            </li>
+            <li className="women hover-underline-animation">
+              Women
+              <i className="bi bi-chevron-down"></i>
+            </li>
+            <li className="accessories hover-underline-animation">
+              Accessories
+              <i className="bi bi-chevron-down"></i>
+            </li>
+            <li className="ozark hover-underline-animation">
+              Ozark
+              <i className="bi bi-chevron-down"></i>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
