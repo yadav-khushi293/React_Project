@@ -14,6 +14,7 @@
   position: fixed;
   top: 0;
   z-index: 21;
+  /* border-bottom: 1px solid; */
 }
 
 .navbar_div1{
@@ -161,7 +162,7 @@
 /* Corusel */
 
 .corusel {
-  margin-top: 191px;
+  margin-top: 186px;
   position: relative;
   width: 100%;
   height: 631px;
