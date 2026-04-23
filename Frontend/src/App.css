@@ -9,6 +9,10 @@
 
 /* Navbar */
 
+.phone_navbar_div2{
+  display: none;
+}
+
 .navbar{
   width: 100%;
   position: fixed;
@@ -85,12 +89,11 @@
   gap: 161px;
 }
 
-
 .navbar_child3>i{
   display: none;
 }
 
-.navbar_child4{
+.navbar_child4,.icons{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +101,7 @@
   /* padding-left: 200px; */
 }
 
-.navbar_child4>i,.search>i{
+.icons>i,.search>i{
   -webkit-text-stroke: 1px currentColor;
   font-size: 23px;
   cursor: pointer;
@@ -470,4 +473,88 @@ cursor: pointer;
 .last_banner{
   width: 100%;
   margin-top: 25px;
+}
+
+@media (min-width:321px) and (max-width:430px){ 
+.navbar_child1,.navbar_child5,.navbar_child3,.prev,.next,.trending_arrow>i{
+  display: none;
+}
+.phone_navbar_div2,.phone_navbar_div2>.navbar_child3,.phone_navbar_div2>.navbar_child3>i{
+  display: inline-block;
+}
+.navbar_div1{
+  gap: 0;
+  padding: 15px;
+}
+.navbar_div2{
+  margin-top: 7px;
+}
+.phone_navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+}
+.phone_navbar>i{
+  -webkit-text-stroke: 1px currentColor;
+  font-size: 31px;
+}
+.phone_navbar_div2>.navbar_child3{
+  padding: 0 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 61px;
+}
+.corusel,.video{
+  height: 271px;
+  object-fit: cover;
+}
+.search{
+  margin: 0 11px;
+  justify-content: space-between;
+  gap: 0;
+}
+.search>input{
+  width: 100%;
+}
+.category{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.category_p{
+ font-size: 13px; 
+}
+.collection{
+  display: grid;
+  padding: 31px 15px;
+}
+.collection_img1,.collection_img2{
+  width: 100%;
+}
+.collection_img1>img{
+  height: 75%;
+}
+.collection_img2{
+  margin-top: -101px;
+}
+.trending{
+  margin: 0 15px;
+}
+.trending_div1{
+  flex-direction: column;
+  justify-content: left;
+  align-items: unset;
+}
+.trending_category{
+  justify-content: left;
+  padding-bottom: 15px;
+}
+.trending_div2{
+  overflow-x: scroll;
+}
+.hr_25, .hr_67{
+  margin: 21px 0;
+}
 }

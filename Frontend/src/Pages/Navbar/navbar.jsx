@@ -29,9 +29,35 @@ export const Navbar = () => {
               <input type="search" placeholder="What are you looking for?" />
               <i className="bi bi-search"></i>
             </div>
-            <i className="bi bi-person"></i>
-            <i className="bi bi-bag"></i>
-            <i className="bi bi-heart"></i>
+            <div className="icons">
+              <i className="bi bi-person"></i>
+              <i className="bi bi-bag"></i>
+              <i className="bi bi-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        {/* Phone */}
+
+        <div className="phone_navbar_div2">
+          <div className="navbar_child3">
+            <div className="phone_navbar">
+              <i className="bi bi-list"></i>
+              <img
+                src="/Utilis/Logo_Website.webp"
+                alt="Website Logo"
+                className="logo_img"
+              />
+            </div>
+            <div className="icons">
+              <i className="bi bi-person"></i>
+              <i className="bi bi-bag"></i>
+              <i className="bi bi-heart"></i>
+            </div>
+          </div>
+          <div className="search">
+            <input type="search" placeholder="What are you looking for?" />
+            <i className="bi bi-search"></i>
           </div>
         </div>
 
