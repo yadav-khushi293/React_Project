@@ -54,7 +54,7 @@ export const HomePage = () => {
   ];
 
   // Video
-  
+
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -264,6 +264,23 @@ export const HomePage = () => {
         alt="Last Banner"
         className="last_banner"
       />
+
+      {/* Phone Down Navbar */}
+
+      <div className="down_navbar">
+        <div className="home">
+          <i class="bi bi-house-door"></i>
+          <p>home</p>
+        </div>
+        <div className="cart">
+          <i className="bi bi-bag"></i>
+          <p>cart</p>
+        </div>
+        <div className="find">
+          <i class="bi bi-geo-alt"></i>
+          <p>find a store</p>
+        </div>
+      </div>
     </div>
   );
-};;
+};

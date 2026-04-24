@@ -475,6 +475,10 @@ cursor: pointer;
   margin-top: 25px;
 }
 
+.down_navbar{
+  display: none;
+}
+
 @media (max-width:430px){ 
   .navbar_child1,.navbar_child5,.navbar_child3,.prev,.next,.trending_arrow>i{
     display: none;
@@ -556,6 +560,33 @@ cursor: pointer;
 }
 .hr_25, .hr_67{
   margin: 21px 0;
+}
+.down_navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 0 31px;
+}
+.home>p,.cart>p,.find>p{
+  font-size: 15px;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+.home,.cart,.find{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+.home>i,.cart>i,.find>i{
+    -webkit-text-stroke: 1px currentColor;
+font-size: 21px;
 }
 }
   
