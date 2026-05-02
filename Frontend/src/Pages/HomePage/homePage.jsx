@@ -269,7 +269,7 @@ export const HomePage = () => {
 
       <div className="down_navbar">
         <div className="home">
-          <i class="bi bi-house-door"></i>
+          <i className="bi bi-house-door"></i>
           <p>home</p>
         </div>
         <div className="cart">
@@ -277,7 +277,7 @@ export const HomePage = () => {
           <p>cart</p>
         </div>
         <div className="find">
-          <i class="bi bi-geo-alt"></i>
+          <i className="bi bi-geo-alt"></i>
           <p>find a store</p>
         </div>
       </div>

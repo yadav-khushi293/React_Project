@@ -1,15 +1,16 @@
 import "./App.css";
-// import { HomePage } from "./Pages/HomePage/homePage";
-// import { Navbar } from "./Pages/Navbar/navbar";
-import {ProdectPages} from './ProductPage/ProductPages'
-
+import { Navbar } from "./Pages/Navbar/navbar";
+import { HomePage } from "./Pages/HomePage/homePage";
+// import { ProdectPages } from "./ProductPage/ProductPages";
+import { Men } from "./Pages/Men/men";
 
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <HomePage /> */}
-      <ProdectPages/>
+      {/* <ProdectPages /> */}
+      <Men />
     </>
   );
 }

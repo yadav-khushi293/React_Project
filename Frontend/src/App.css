@@ -151,6 +151,7 @@
   font-weight: 700;
   letter-spacing: 0.2px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .navbar_category>.hover-underline-animation::after{
@@ -162,10 +163,12 @@
   font-size: smaller;
 }
 
+/* Home Page */
+
 /* Corusel */
 
 .corusel {
-  margin-top: 186px;
+  margin-top: 187px;
   position: relative;
   width: 100%;
   height: 631px;
@@ -479,6 +482,30 @@ cursor: pointer;
   display: none;
 }
 
+/* End Of Home Page */
+
+/* Men Product Page */
+
+.men_product{
+margin-top: 191px;
+}
+
+.background_img{
+  background: 
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/Utilis/Men_Banner.webp);
+  height: 100%;
+  border-radius: 15px;
+  margin: 0 15px;
+  padding: 123px 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+}
+
+/* Media Query */
+
 @media (max-width:430px){ 
   .navbar_child1,.navbar_child5,.navbar_child3,.prev,.next,.trending_arrow>i{
     display: none;
@@ -495,7 +522,7 @@ cursor: pointer;
 }
 .phone_navbar{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 21px;
 }
