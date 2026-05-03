@@ -492,7 +492,7 @@ margin-top: 191px;
 
 .background_img{
   background: 
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/Utilis/Men_Banner.webp);
+  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/Utilis/Men_Banner.webp);
   height: 100%;
   border-radius: 15px;
   margin: 0 15px;
@@ -502,6 +502,83 @@ margin-top: 191px;
   color: #fff;
   font-weight: 700;
   font-size: 45px;
+}
+
+.filter_sort_div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 75px;
+}
+
+.filter{
+  gap: 21px;
+}
+
+.filter,.filter_child1{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 11px 13px;
+  text-transform: capitalize;
+}
+
+.filter>p{
+  opacity: 0.7;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+
+.filter_child1{
+  font-size: larger;
+  font-weight: 600;
+  gap: 11px;
+  border: 1px solid #e5e5e5;
+  border-radius: 21px;
+}
+
+.filter>.filter_child1>i{
+  -webkit-text-stroke: 1px currentColor;
+}
+
+.filter>.filter_child1>p{
+  font-size: medium;
+}
+
+.sort{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sort_list{
+  max-width: 221px;
+  width: auto;
+}
+
+.sort_list>select{
+  cursor: pointer;
+  font-size: 15px;
+  padding: 15px 21px;
+  padding-right: 51px;
+  border-radius: 25px;
+  border:1px solid #e5e5e5;
+
+  appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg width='20' height='20' viewBox='0 0 25 25' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'><polyline points='6 9 13 15 19 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+}
+
+.sort_list>select>option{
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
 }
 
 /* Media Query */

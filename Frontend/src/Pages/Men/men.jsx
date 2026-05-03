@@ -1,14 +1,81 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
 
 export const Men = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const api_calling = async () => {
+      try {
+        const res = await axios.get(
+          "https://react-project-1s4c.onrender.com/men",
+        );
+        setData(res.data);
+      } catch (error) {
+        console.log("✈️  error: ", error);
+      }
+    };
+
+    api_calling();
+  }, []);
+
   return (
     <>
       <div className="men_product">
         <div className="background_img">
           <p className="img_text">men</p>
+        </div>
+
+        <div className="filter_sort_div">
+          <div className="filter">
+            <div className="filter_child1">
+              <i className="bi bi-funnel"></i>
+              <p>filter</p>
+            </div>
+            <p>20 products</p>
+          </div>
+
+          <div className="sort">
+            <p>sort by:</p>
+            <div className="sort_list">
+              <select defaultValue="date_old">
+                <option value="featured">featured</option>
+                <option value="most_relevant">most relevant</option>
+                <option value="best_seloptionng">best seloptionng</option>
+                <option value=" a_z">alphabetically, a-z</option>
+                <option value="a_z">alphabetically, z-a</option>
+                <option value="price_high">price, high to low</option>
+                <option value="price_low">price, low to high</option>
+                <option value="date_new">date, new to old</option>
+                <option value="date_old"> Date, Old To New</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div className="men_product">
+          {data.map((item) => (
+            <div className="men_product_card" key={item.id}>
+              <div className="heart_list">
+                <i className="bi bi-heart"></i>
+              </div>
+              <div className="men_image">
+                <img src={item.img} alt={item.title} />
+              </div>
+
+              <div className="men_product_info">
+                <p className="men_info">{item.title}</p>
+              </div>
+
+              <div className="men_price">
+                {/* <span className="badge">Save 77%</span> */}
+                <span className="men_new_price">₹ {item.price}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
