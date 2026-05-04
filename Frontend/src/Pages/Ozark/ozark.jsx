@@ -79,26 +79,26 @@ export const Ozark = () => {
           </div>
         </div>
 
-        <div className="men_product_div">
+        <div className="ozark_product_div">
           {data.map((item) => (
-            <div className="men_product_card" key={item.id}>
+            <div className="ozark_product_card" key={item.id}>
               <div className="heart_list">
                 <i className="bi bi-heart"></i>
               </div>
 
-              <div className="men_image">
+              <div className="ozark_image">
                 <img src={item.img} alt={item.title} loading="lazy" />
               </div>
 
-              <div className="men_product_info">
-                <p className="men_info hover-underline-animation dark">
+              <div className="ozark_product_info">
+                <p className="ozark_info hover-underline-animation dark">
                   {item.title}
                 </p>
               </div>
 
-              <div className="men_price">
+              <div className="ozark_price">
                 {/* <span className="badge">Save 77%</span> */}
-                <span className="men_new_price">₹ {item.price}</span>
+                <span className="ozark_new_price">₹ {item.price}</span>
               </div>
             </div>
           ))}

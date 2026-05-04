@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
@@ -19,12 +20,14 @@ export const Navbar = () => {
       <div className="navbar_div2">
         <div className="navbar_child3">
           <i className="bi bi-list"></i>
-          <img
-            src="/Utilis/Logo_Website.webp"
-            alt="Website Logo"
-            className="logo_img"
-            loading="lazy"
-          />
+          <NavLink to="/">
+            <img
+              src="/Utilis/Logo_Website.webp"
+              alt="Website Logo"
+              className="logo_img"
+              loading="lazy"
+            />
+          </NavLink>
           <div className="navbar_child4">
             <div className="search">
               <input type="search" placeholder="What are you looking for?" />
@@ -44,12 +47,14 @@ export const Navbar = () => {
           <div className="navbar_child3">
             <div className="phone_navbar">
               <i className="bi bi-list"></i>
-              <img
-                src="/Utilis/Logo_Website.webp"
-                alt="Website Logo"
-                className="logo_img"
-                loading="lazy"
-              />
+              <NavLink to="/">
+                <img
+                  src="/Utilis/Logo_Website.webp"
+                  alt="Website Logo"
+                  className="logo_img"
+                  loading="lazy"
+                />
+              </NavLink>
             </div>
             <div className="icons">
               <i className="bi bi-person"></i>
@@ -66,20 +71,28 @@ export const Navbar = () => {
         <div className="navbar_child5">
           <ul className="navbar_category">
             <li className="men hover-underline-animation">
-              Men
-              <i className="bi bi-chevron-down"></i>
+              <NavLink to="/men">
+                Men
+                <i className="bi bi-chevron-down"></i>
+              </NavLink>
             </li>
             <li className="women hover-underline-animation">
-              Women
-              <i className="bi bi-chevron-down"></i>
+              <NavLink to="/products">
+                Women
+                <i className="bi bi-chevron-down"></i>
+              </NavLink>
             </li>
             <li className="accessories hover-underline-animation">
-              Accessories
-              <i className="bi bi-chevron-down"></i>
+              <NavLink to="/">
+                Accessories
+                <i className="bi bi-chevron-down"></i>
+              </NavLink>
             </li>
             <li className="ozark hover-underline-animation">
-              Ozark
-              <i className="bi bi-chevron-down"></i>
+              <NavLink to="/ozark">
+                Ozark
+                <i className="bi bi-chevron-down"></i>
+              </NavLink>
             </li>
           </ul>
         </div>
