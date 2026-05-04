@@ -486,7 +486,7 @@ cursor: pointer;
 
 /* Men Product Page */
 
-.men_product{
+.men_product,.ozark_product{
 margin-top: 191px;
 }
 
@@ -502,6 +502,14 @@ margin-top: 191px;
   color: #fff;
   font-weight: 700;
   font-size: 45px;
+}
+
+.ozark_product>.background_img{
+  background: url(/Utilis/Ozark_Banner.webp);
+  margin: 0 151px;
+  padding: 87.5px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .filter_sort_div{
@@ -591,7 +599,7 @@ margin-top: 191px;
   text-transform: capitalize;
 }
 
-.men_product_div{
+.men_product_div, .ozark_product_div{
   margin: 21px 75px;
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -601,7 +609,7 @@ margin-top: 191px;
   gap: 15px;
 }
 
-.men_product_card{
+.men_product_card, .ozark_product_card{
   position: relative;
 }
 
@@ -613,16 +621,16 @@ margin-top: 191px;
   padding: 7px;
 }
 
-.men_image{
+.men_image, .ozark_image{
   width: 100%;
   cursor: pointer;
 }
 
-.men_image>img{
+.men_image>img, .ozark_image>img{
   width: inherit;
 }
 
-.men_product_info{
+.men_product_info, .ozark_product_info{
   padding: 5px 0;
 }
 
@@ -634,7 +642,7 @@ margin-top: 191px;
   line-height: 25px;
 }
 
-.men_new_price{
+.men_new_price, .ozark_new_price{
   color: #c4301c;
   font-weight: 500;
 }
@@ -654,6 +662,36 @@ margin-top: 191px;
 
 .hover-underline-animation.dark:hover {
   background-size: 100% 1.3px;
+}
+
+/* Men Collection Page End */
+
+/* Ozark Page */
+
+.ozark_category{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  margin: 25px 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.category_div1,.category_div2,.category_div3{
+  cursor: pointer;
+}
+
+.category_div1>p,.category_div2>p,.category_div3>p{
+  border-bottom: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  padding-bottom: 11px;
+}
+
+.category_div1>img,.category_div2>img,.category_div3>img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /* Media Query */
@@ -767,11 +805,35 @@ margin-top: 191px;
     -webkit-text-stroke: 1px currentColor;
 font-size: 21px;
 }
+.background_img{
+  padding: 5px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filter_child1{
+  background: #ededed;
+}
+.filter_sort_div{
+  margin: 15px;
+}
+.filter{
+  flex-direction: column-reverse;
+}
+.sort{
+  display: none;
+}
+.men_product_div, .ozark_product_div{
+  grid-template-columns: repeat(2,1fr);
+  margin: 21px 15px;
+}
 }
   
   @media (max-width:380px){
     .phone_navbar{
       justify-content: unset !important;
+    }
+    .men_product,.ozark_product{
+      margin-top: 211px;
     }
   }
 
@@ -837,4 +899,40 @@ font-size: 21px;
     overflow-x: scroll;
     justify-content: unset;
   }
+.background_img{
+  padding: 47px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filter_child1{
+  background: #ededed;
+}
+.filter_sort_div{
+  margin: 15px;
+}
+.sort{
+  display: none;
+}
+.men_product_div, .ozark_product_div{
+  grid-template-columns: repeat(3,1fr);
+  margin: 21px 15px;
+}
+}
+
+@media (min-width: 841px) and (max-width:1440px){
+  .navbar_div1{
+    padding: 15px 25px;
+  }
+  .navbar_child3{
+    gap: 11px;
+    padding-right: 21px;
+  }
+.background_img{
+  padding: 73px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filter_sort_div,.men_product_div, .ozark_product_div{
+  margin: 15px 21px;
+}
 }

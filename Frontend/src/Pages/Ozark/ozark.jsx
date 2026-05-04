@@ -4,14 +4,14 @@ import axios from "axios";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
 
-export const Men = () => {
+export const Ozark = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const api_calling = async () => {
       try {
         const res = await axios.get(
-          "https://react-project-1s4c.onrender.com/men",
+          "https://react-project-1s4c.onrender.com/ozark",
         );
         setData(res.data);
       } catch (error) {
@@ -24,9 +24,32 @@ export const Men = () => {
 
   return (
     <>
-      <div className="men_product">
+      <div className="ozark_product">
         <div className="background_img">
-          <p className="img_text">men</p>
+          <p className="img_text">ozark adventure shoes</p>
+        </div>
+
+        <div className="ozark_category">
+          <div className="category_div1">
+            <img src="/Utilis/Hiking.avif" alt="Hiking Image" loading="lazy" />
+            <p>hiking</p>
+          </div>
+          <div className="category_div2">
+            <img
+              src="/Utilis/Trail_Running.avif"
+              alt="Trail Runing Image"
+              loading="lazy"
+            />
+            <p>trail running</p>
+          </div>
+          <div className="category_div3">
+            <img
+              src="/Utilis/Trecking.webp"
+              alt="Trecking Image"
+              loading="lazy"
+            />
+            <p>trekking</p>
+          </div>
         </div>
 
         <div className="filter_sort_div">
@@ -41,10 +64,10 @@ export const Men = () => {
           <div className="sort">
             <p>sort by:</p>
             <div className="sort_list">
-              <select defaultValue="date_old">
+              <select defaultValue="best_selling">
                 <option value="featured">featured</option>
                 <option value="most_relevant">most relevant</option>
-                <option value="best_selling">best selling</option>
+                <option value="best_selling">Best Selling</option>
                 <option value=" a_z">alphabetically, a-z</option>
                 <option value="a_z">alphabetically, z-a</option>
                 <option value="price_high">price, high to low</option>
@@ -57,31 +80,28 @@ export const Men = () => {
         </div>
 
         <div className="men_product_div">
-          {data
-            .slice()
-            .reverse()
-            .map((item) => (
-              <div className="men_product_card" key={item.id}>
-                <div className="heart_list">
-                  <i className="bi bi-heart"></i>
-                </div>
-
-                <div className="men_image">
-                  <img src={item.img} alt={item.title} loading="lazy" />
-                </div>
-
-                <div className="men_product_info">
-                  <p className="men_info hover-underline-animation dark">
-                    {item.title}
-                  </p>
-                </div>
-
-                <div className="men_price">
-                  {/* <span className="badge">Save 77%</span> */}
-                  <span className="men_new_price">₹ {item.price}</span>
-                </div>
+          {data.map((item) => (
+            <div className="men_product_card" key={item.id}>
+              <div className="heart_list">
+                <i className="bi bi-heart"></i>
               </div>
-            ))}
+
+              <div className="men_image">
+                <img src={item.img} alt={item.title} loading="lazy" />
+              </div>
+
+              <div className="men_product_info">
+                <p className="men_info hover-underline-animation dark">
+                  {item.title}
+                </p>
+              </div>
+
+              <div className="men_price">
+                {/* <span className="badge">Save 77%</span> */}
+                <span className="men_new_price">₹ {item.price}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Phone Down Navbar */}
