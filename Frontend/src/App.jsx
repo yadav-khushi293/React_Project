@@ -1,7 +1,8 @@
-import "./App.css";
+
 // import { HomePage } from "./Pages/HomePage/homePage";
 // import { Navbar } from "./Pages/Navbar/navbar";
-import {ProdectPages} from './ProductPage/ProductPages'
+// import {ProdectPages} from './ProductPage/ProductPages'
+import {Accessories} from './ProductPage/Accessories'
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <>
       {/* <Navbar /> */}
       {/* <HomePage /> */}
-      <ProdectPages/>
+      {/* <ProdectPages/> */}
+      <Accessories/>
     </>
   );
 }

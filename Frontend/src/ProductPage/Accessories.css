@@ -5,7 +5,7 @@
 }
 
 .background_img{
-    background: url("/Utilis/bacground_img.webp");
+    background: url("Utilis/Accessories_copy.webp");
     background-size: cover;
     background-position: center;
     height:280px;
@@ -23,6 +23,7 @@
 
 }
 
+
 .product-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -32,8 +33,9 @@
 
 .product-card {
   width: 100%;
-  text-align: center;
+  text-align:start;
 }
+
 
 .image-box {
   width: 100%;
@@ -61,9 +63,10 @@
   font-weight: bold;
   text-decoration: none;
   font-size:20px;
-  text-align: center !important;
+  text-align:start !important;
 
 }
+
 
 
 .filter_sort_div{
