@@ -1,6 +1,6 @@
 import "./App.css";
 import { Navbar } from "./Pages/Navbar/navbar";
-import { HomePage } from "./Pages/HomePage/homePage";
+// import { HomePage } from "./Pages/HomePage/homePage";
 // import { ProdectPages } from "./ProductPage/ProductPages";
 import { Men } from "./Pages/Men/men";
 

@@ -94,6 +94,7 @@ export const HomePage = () => {
         src="/Utilis/Homepage.webp"
         alt="Homepage Image"
         className="home_page_img"
+        loading="lazy"
       />
 
       {/* Category Section */}
@@ -105,6 +106,7 @@ export const HomePage = () => {
               src="/Utilis/Category1.webp"
               alt="Category Image 1"
               className="category_img1"
+              loading="lazy"
             />
           </div>
 
@@ -120,6 +122,7 @@ export const HomePage = () => {
               src="/Utilis/Category2.webp"
               alt="Category Image 2"
               className="category_img2"
+              loading="lazy"
             />
           </div>
 
@@ -134,6 +137,7 @@ export const HomePage = () => {
             <img
               src="/Utilis/Category3..jpg"
               alt="Category Image 3"
+              loading="lazy"
               className="category_img3"
             />
           </div>
@@ -149,6 +153,7 @@ export const HomePage = () => {
             <img
               src="/Utilis/Category4.webp"
               alt="Category Image 4"
+              loading="lazy"
               className="category_img4"
             />
           </div>
@@ -164,16 +169,25 @@ export const HomePage = () => {
         src="/Utilis/Summer_Walk.webp"
         alt="HomePage Image 2"
         className="home_page_img2"
+        loading="lazy"
       />
 
       {/* Collection */}
 
       <div className="collection">
         <div className="collection_img1">
-          <img src="/Utilis/Collection1.webp" alt="Collection Image 1" />
+          <img
+            src="/Utilis/Collection1.webp"
+            alt="Collection Image 1"
+            loading="lazy"
+          />
         </div>
         <div className="collection_img2">
-          <img src="/Utilis/Collection2.webp" alt="Collection Image 2" />
+          <img
+            src="/Utilis/Collection2.webp"
+            alt="Collection Image 2"
+            loading="lazy"
+          />
         </div>
       </div>
 
@@ -194,28 +208,34 @@ export const HomePage = () => {
             src="/Utilis/Scroll_Image1.jpg"
             alt="Trending Image 1"
             className="trending_img1"
+            loading="lazy"
           />
           <img
             src="/Utilis/Scroll_Image2.jpg"
             alt="Trending Image 2"
             className="trending_img2"
+            loading="lazy"
           />
           <img
+            loading="lazy"
             src="/Utilis/Scroll_Image3.jpg"
             alt="Trending Image 3"
             className="trending_img3"
           />
           <img
+            loading="lazy"
             src="/Utilis/Scroll_Image4.jpg"
             alt="Trending Image 4"
             className="trending_img4"
           />
           <img
+            loading="lazy"
             src="/Utilis/Scroll_Image5.jpg"
             alt="Trending Image 5"
             className="trending_img5"
           />
           <img
+            loading="lazy"
             src="/Utilis/Scroll_Image6.jpg"
             alt="Trending Image 6"
             className="trending_img6"
@@ -239,6 +259,7 @@ export const HomePage = () => {
               src={img}
               alt={`Scroll ${index + 1}`}
               className="scroll_img"
+              loading="lazy"
             />
           ))}
         </div>
@@ -263,6 +284,7 @@ export const HomePage = () => {
         src="/Utilis/Down_Banner.jpg"
         alt="Last Banner"
         className="last_banner"
+        loading="lazy"
       />
 
       {/* Phone Down Navbar */}

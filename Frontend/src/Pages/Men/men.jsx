@@ -56,26 +56,32 @@ export const Men = () => {
           </div>
         </div>
 
-        <div className="men_product">
-          {data.map((item) => (
-            <div className="men_product_card" key={item.id}>
-              <div className="heart_list">
-                <i className="bi bi-heart"></i>
-              </div>
-              <div className="men_image">
-                <img src={item.img} alt={item.title} />
-              </div>
+        <div className="men_product_div">
+          {data
+            .slice()
+            .reverse()
+            .map((item) => (
+              <div className="men_product_card" key={item.id}>
+                <div className="heart_list">
+                  <i className="bi bi-heart"></i>
+                </div>
 
-              <div className="men_product_info">
-                <p className="men_info">{item.title}</p>
-              </div>
+                <div className="men_image">
+                  <img src={item.img} alt={item.title} loading="lazy" />
+                </div>
 
-              <div className="men_price">
-                {/* <span className="badge">Save 77%</span> */}
-                <span className="men_new_price">₹ {item.price}</span>
+                <div className="men_product_info">
+                  <p className="men_info hover-underline-animation dark">
+                    {item.title}
+                  </p>
+                </div>
+
+                <div className="men_price">
+                  {/* <span className="badge">Save 77%</span> */}
+                  <span className="men_new_price">₹ {item.price}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </>

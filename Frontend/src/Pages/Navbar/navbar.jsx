@@ -23,6 +23,7 @@ export const Navbar = () => {
             src="/Utilis/Logo_Website.webp"
             alt="Website Logo"
             className="logo_img"
+            loading="lazy"
           />
           <div className="navbar_child4">
             <div className="search">
@@ -47,6 +48,7 @@ export const Navbar = () => {
                 src="/Utilis/Logo_Website.webp"
                 alt="Website Logo"
                 className="logo_img"
+                loading="lazy"
               />
             </div>
             <div className="icons">
