@@ -71,28 +71,20 @@ export const Navbar = () => {
         <div className="navbar_child5">
           <ul className="navbar_category">
             <li className="men hover-underline-animation">
-              <NavLink to="/men">
-                Men
-                <i className="bi bi-chevron-down"></i>
-              </NavLink>
+              <NavLink to="/men">Men</NavLink>
+              <i className="bi bi-chevron-down"></i>
             </li>
             <li className="women hover-underline-animation">
-              <NavLink to="/products">
-                Women
-                <i className="bi bi-chevron-down"></i>
-              </NavLink>
+              <NavLink to="/products">Women</NavLink>
+              <i className="bi bi-chevron-down"></i>
             </li>
             <li className="accessories hover-underline-animation">
-              <NavLink to="/">
-                Accessories
-                <i className="bi bi-chevron-down"></i>
-              </NavLink>
+              <NavLink to="/accessories">Accessories</NavLink>
+              <i className="bi bi-chevron-down"></i>
             </li>
             <li className="ozark hover-underline-animation">
-              <NavLink to="/ozark">
-                Ozark
-                <i className="bi bi-chevron-down"></i>
-              </NavLink>
+              <NavLink to="/ozark">Ozark</NavLink>
+              <i className="bi bi-chevron-down"></i>
             </li>
           </ul>
         </div>

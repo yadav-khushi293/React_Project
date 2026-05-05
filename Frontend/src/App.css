@@ -495,7 +495,7 @@ cursor: pointer;
 margin-top: 191px;
 }
 
-.background_img{
+.men_product>.background_img{
   background: 
   linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/Utilis/Men_Banner.webp);
   height: 100%;
@@ -683,7 +683,7 @@ margin-top: 191px;
 }
 
 .category_div1,.category_div2,.category_div3{
-  position: relative;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -698,14 +698,12 @@ margin-top: 191px;
 .category_div1>img,.category_div2>img,.category_div3>img{
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  /* display: block; */
-  transition: all 0.3s ease-in-out;
 }
 
 .category_div1:hover,
 .category_div2:hover,
 .category_div3:hover{
-  transform: scale(0.9) translateY(-11px);
+  transform: scaleY(0.9) translateY(-11px);
 }
 
 /* Media Query */
@@ -819,7 +817,7 @@ margin-top: 191px;
     -webkit-text-stroke: 1px currentColor;
 font-size: 21px;
 }
-.background_img,.ozark_product>.background_img{
+.men_product>.background_img,.ozark_product>.background_img{
   padding: 5px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -927,7 +925,7 @@ font-size: 21px;
     overflow-x: scroll;
     justify-content: unset;
   }
-.background_img{
+.men_product>.background_img{
   padding: 47px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -955,7 +953,7 @@ font-size: 21px;
     gap: 11px;
     padding-right: 21px;
   }
-.background_img{
+.men_product>.background_img{
   padding: 73px 0;
   background-repeat: no-repeat;
   background-size: cover;

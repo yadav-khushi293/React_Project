@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import "../ProductPage/ProdectPages.css";
+import "../ProductPage/Accessories.css";
 import axios from "axios";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-export const ProdectPages = () => {
+export const Accessories = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const api_calling = async () => {
       try {
         const res = await axios.get(
-          "https://react-project-1s4c.onrender.com/women"
+          "https://react-project-1s4c.onrender.com/accessories"
         );
         setData(res.data);
       } catch (error) {
@@ -23,7 +23,7 @@ export const ProdectPages = () => {
   return (
     <>
       <div className="background_img">
-        <p className="woman">Woman</p>
+        <p className="woman">Accessories</p>
       </div>
       
       {/*  */}
