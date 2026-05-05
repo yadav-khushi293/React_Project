@@ -8,6 +8,7 @@ import { ProdectPages } from "./ProductPage/ProductPages";
 import { Men } from "./Pages/Men/men";
 import { Ozark } from "./Pages/Ozark/ozark";
 import { Accessories } from "./ProductPage/Accessories";
+import { Footer } from "./ProductPage/Footer";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/products" element={<ProdectPages />}></Route>
         <Route path="/accessories" element={<Accessories />}></Route>
       </Routes>
+
+      <Footer />
     </>
   );
 }

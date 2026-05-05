@@ -7,6 +7,7 @@ import "../../App.css";
 
 export const HomePage = () => {
   const images = [
+    "/Utilis/Homepage5(Corosal).jpg",
     "/Utilis/Homepage1(Corosal).jpg",
     "/Utilis/Homepage2(Corosal).jpg",
     "/Utilis/Homepage3(Corosal).jpg",
@@ -20,7 +21,7 @@ export const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
