@@ -636,7 +636,27 @@ margin-top: 191px;
   text-transform: capitalize;
 }
 
-.men_product_div, .ozark_product_div{
+.men_product_div{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 11px;
+  padding: 0 29px;
+}
+
+.filter_price{  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.shrink,.expand{
+  text-decoration: none;
+  color: #000;
+}
+
+.men_product_child2, .ozark_product_div{
   margin: 21px 75px;
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -889,7 +909,7 @@ font-size: 21px;
 .sort{
   display: none !important;
 }
-.men_product_div, .ozark_product_div,.men_footware_product,.women_footware_product,.topwear{
+.men_product_child2, .ozark_product_div,.men_footware_product,.women_footware_product,.topwear{
   grid-template-columns: repeat(2,1fr);
   margin: 21px 15px;
 }
@@ -980,7 +1000,7 @@ font-size: 21px;
 .sort{
   display: none !important;
 }
-.men_product_div, .ozark_product_div{
+.men_product_child2, .ozark_product_div{
   grid-template-columns: repeat(3,1fr);
   margin: 21px 15px;
 }
@@ -999,7 +1019,7 @@ font-size: 21px;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.filter_sort_div,.men_product_div, .ozark_product_div{
+.filter_sort_div,.men_product_child2, .ozark_product_div{
   margin: 15px 21px !important;
 }
 }

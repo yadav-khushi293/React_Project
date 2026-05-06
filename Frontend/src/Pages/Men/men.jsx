@@ -57,47 +57,57 @@ export const Men = () => {
         </div>
 
         <div className="men_product_div">
-          {data
-            .slice()
-            .reverse()
-            .map((item) => (
-              <div className="men_product_card" key={item.id}>
-                <div className="heart_list">
-                  <i className="bi bi-heart"></i>
-                </div>
-
-                <div className="men_image">
-                  <img src={item.img} alt={item.title} loading="lazy" />
-                </div>
-
-                <div className="men_product_info">
-                  <p className="men_info hover-underline-animation dark">
-                    {item.title}
-                  </p>
-                </div>
-
-                <div className="men_price">
-                  {/* <span className="badge">Save 77%</span> */}
-                  <span className="men_new_price">₹ {item.price}</span>
-                </div>
-              </div>
-            ))}
-        </div>
-
-        {/* Phone Down Navbar */}
-
-        <div className="down_navbar">
-          <div className="home">
-            <i className="bi bi-house-door"></i>
-            <p>home</p>
+          <div className="filter_div">
+            <div className="filter_price">
+              <p>price</p>
+              <span className="shrink">+</span>
+              <span className="expand">-</span>
+            </div>
           </div>
-          <div className="cart">
-            <i className="bi bi-bag"></i>
-            <p>cart</p>
+
+          <div className="men_product_child2">
+            {data
+              .slice()
+              .reverse()
+              .map((item) => (
+                <div className="men_product_card" key={item.id}>
+                  <div className="heart_list">
+                    <i className="bi bi-heart"></i>
+                  </div>
+
+                  <div className="men_image">
+                    <img src={item.img} alt={item.title} loading="lazy" />
+                  </div>
+
+                  <div className="men_product_info">
+                    <p className="men_info hover-underline-animation dark">
+                      {item.title}
+                    </p>
+                  </div>
+
+                  <div className="men_price">
+                    {/* <span className="badge">Save 77%</span> */}
+                    <span className="men_new_price">₹ {item.price}</span>
+                  </div>
+                </div>
+              ))}
           </div>
-          <div className="find">
-            <i className="bi bi-geo-alt"></i>
-            <p>find a store</p>
+
+          {/* Phone Down Navbar */}
+
+          <div className="down_navbar">
+            <div className="home">
+              <i className="bi bi-house-door"></i>
+              <p>home</p>
+            </div>
+            <div className="cart">
+              <i className="bi bi-bag"></i>
+              <p>cart</p>
+            </div>
+            <div className="find">
+              <i className="bi bi-geo-alt"></i>
+              <p>find a store</p>
+            </div>
           </div>
         </div>
       </div>
