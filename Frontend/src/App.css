@@ -587,9 +587,22 @@ margin-top: 191px;
   border-radius: 21px;
 }
 
-.filter_child1:hover{   
+.filter_child1:hover,.filter_price_button:hover{   
   background-position: left bottom;
   color: #fff;
+}
+
+.filter_price_button{
+  background: linear-gradient(to right, #000 50%, #fff 50%);
+  background-size:  200% 100%;
+  background-position: right bottom;
+  margin-top: 21px;
+  padding: 11px 13px;
+  border: 1px solid #e5e5e5;
+  border-radius: 21px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .filter>.filter_child1>i,.heart_list>i{
@@ -644,16 +657,98 @@ margin-top: 191px;
   padding: 0 29px;
 }
 
+.filter_div{
+ width: 100%;
+ padding: 21px 0; 
+}
+
 .filter_price{  
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
+  font-size: 23px;
+  font-weight: 700;
 }
 
-.shrink,.expand{
-  text-decoration: none;
+.highest_price{
+  margin-top: 21px;
+  color: gray;
+  font-size: 19px;
+  text-transform: capitalize;
+}
+
+.range_slider{
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 30px;
+  background-color: #e5e5e5;
+}
+.range_slider::before {
+  content: "";
+  position: absolute;
+  left: var(--min);
+  right: calc(100% - var(--max));
+  height: 100%;
+  background-color: #000; 
+  z-index: 1;
+}
+
+.range_slider input{
+  width: 100%;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.range_slider input::-webkit-slider-thumb{
+  margin-top: -9px;
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.range_slider input::-webkit-slider-runnable-track{
+  height: 5px;
+  background-color: transparent;
+}
+
+.price_inputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37px;
+  gap: 7px;
+}
+
+.price_box{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price_box input{
+  padding: 13px 15px;
+  border-radius: 41px;
+  border: 1px solid #ddd;
+  width: 110px;
+  font-size: 17px;
+  color: gray;
+}
+
+.price_box>span,.filter_price>span{
   color: #000;
+  text-decoration: none;
 }
 
 .men_product_child2, .ozark_product_div{
@@ -663,6 +758,24 @@ margin-top: 191px;
   justify-items: center;
   align-content: center;
   gap: 15px;
+}
+
+.no_product{
+  grid-column: 1/-1;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 100px 0;
+}
+
+.no_product>h2{
+  font-size: 31px;
+  margin-bottom: 11px;
+}
+
+.no_product>p{
+  color: gray;
+  font-size: 19px;
 }
 
 .men_product_card, .ozark_product_card{

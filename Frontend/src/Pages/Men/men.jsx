@@ -6,6 +6,9 @@ import "../../App.css";
 
 export const Men = () => {
   const [data, setData] = useState([]);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(2970);
+  const [expand, setExpand] = useState(true);
 
   useEffect(() => {
     const api_calling = async () => {
@@ -21,6 +24,10 @@ export const Men = () => {
 
     api_calling();
   }, []);
+
+  const filterData = data.filter(
+    (item) => item.price >= minPrice && item.price <= maxPrice,
+  );
 
   return (
     <>
@@ -60,38 +67,124 @@ export const Men = () => {
           <div className="filter_div">
             <div className="filter_price">
               <p>price</p>
-              <span className="shrink">+</span>
-              <span className="expand">-</span>
+              <i
+                onClick={() => setExpand(!expand)}
+                style={{
+                  cursor: "pointer",
+                  fontSize: "23px",
+                  userSelect: "none",
+                  WebkitTextStroke: "1px currentColor",
+                }}
+                className={expand ? "bi bi-dash" : "bi bi-plus"}
+              ></i>
             </div>
-          </div>
 
-          <div className="men_product_child2">
-            {data
-              .slice()
-              .reverse()
-              .map((item) => (
-                <div className="men_product_card" key={item.id}>
-                  <div className="heart_list">
-                    <i className="bi bi-heart"></i>
+            {expand && (
+              <>
+                <p className="highest_price">the highest price is ₹ 2,970</p>
+
+                <div
+                  className="range_slider"
+                  style={{
+                    "--min": `${(minPrice / 2970) * 100}%`,
+                    "--max": `${(maxPrice / 2970) * 100}%`,
+                  }}
+                >
+                  <input
+                    type="range"
+                    min="0"
+                    max="2970"
+                    value={minPrice}
+                    onChange={(e) => setMinPrice(Number(e.target.value))}
+                  />
+
+                  <input
+                    type="range"
+                    min="0"
+                    max="2970"
+                    value={maxPrice}
+                    onChange={(e) => setMaxPrice(Number(e.target.value))}
+                  />
+                </div>
+
+                <div className="price_inputs">
+                  <div className="price_box">
+                    <span>₹</span>
+                    <input
+                      type="number"
+                      value={minPrice}
+                      onChange={(e) => {
+                        const value = Number(e.target.value);
+
+                        if (value <= maxPrice) {
+                          setMinPrice(value);
+                        }
+                      }}
+                    />
                   </div>
 
-                  <div className="men_image">
-                    <img src={item.img} alt={item.title} loading="lazy" />
-                  </div>
+                  <div className="price_box">
+                    <span>₹</span>
+                    <input
+                      type="number"
+                      value={maxPrice}
+                      onChange={(e) => {
+                        const value = Number(e.target.value);
 
-                  <div className="men_product_info">
-                    <p className="men_info hover-underline-animation dark">
-                      {item.title}
-                    </p>
-                  </div>
-
-                  <div className="men_price">
-                    {/* <span className="badge">Save 77%</span> */}
-                    <span className="men_new_price">₹ {item.price}</span>
+                        if (value >= minPrice) {
+                          setMaxPrice(value);
+                        }
+                      }}
+                    />
                   </div>
                 </div>
-              ))}
+              </>
+            )}
           </div>
+
+          {filterData.length > 0 ? (
+            <div className="men_product_child2">
+              {filterData
+                .slice()
+                .reverse()
+                .map((item) => (
+                  <div className="men_product_card" key={item.id}>
+                    <div className="heart_list">
+                      <i className="bi bi-heart"></i>
+                    </div>
+
+                    <div className="men_image">
+                      <img src={item.img} alt={item.title} loading="lazy" />
+                    </div>
+
+                    <div className="men_product_info">
+                      <p className="men_info hover-underline-animation dark">
+                        {item.title}
+                      </p>
+                    </div>
+
+                    <div className="men_price">
+                      {/* <span className="badge">Save 77%</span> */}
+                      <span className="men_new_price">₹ {item.price}</span>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <div className="no_product">
+              <h2>no product found</h2>
+              <p>try changing the price range</p>
+              <button
+                className="filter_price_button"
+                onClick={() => {
+                  setMinPrice(0);
+                  setMaxPrice(2970);
+                }}
+              >
+                Clear All
+              </button>
+            </div>
+          )}
 
           {/* Phone Down Navbar */}
 
