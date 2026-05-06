@@ -1,7 +1,9 @@
 import React from "react";
+
+// import {Accessories} from "./ProductPage/Accessories"
 // import { Route, Routes } from "react-router-dom";
 
-import "./App.css";
+// import "./App.css";
 // import { Navbar } from "./Pages/Navbar/navbar";
 // import { HomePage } from "./Pages/HomePage/homePage";
 // import { Men } from "./Pages/Men/men";
@@ -12,8 +14,9 @@ import "./App.css";
 // import { Accessories } from "./ProductPage/Accessories";
 // import { Ozark } from "./Pages/Ozark/ozark";
 // import { Footer } from "./ProductPage/Footer";
-// import {Cart} from "./Pages/Cartpage/Cart";
-import {Sign_in} from "./Pages/Sign_in/Sign_in";
+import {Cart} from "./Pages/Cartpage/Cart";
+// import {Sign_in} from "./Pages/Sign_in/Sign_in";
+// import {Login} from "./Pages/Login/Login"
 
 function App() {
   return (
@@ -33,9 +36,10 @@ function App() {
 
       {/* <Footer /> */}
 
-      {/* <Cart/> */}
-
-      <Sign_in/>
+      <Cart/>
+      {/* <Sign_in/> */}
+      {/* <Login/> */}
+      {/* <Accessories/> */}
     </>
   );
 }

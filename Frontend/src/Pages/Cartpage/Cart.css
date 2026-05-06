@@ -34,13 +34,13 @@
       padding:30px 0px;
     }
     .card ul {
-      list-style-type: disc; /* 👉 ye dots ke liye */
+      list-style-type: disc; 
       padding-left: 20px;
     }
 
     
     .card1 ul {
-      list-style-type: disc; /* 👉 ye dots ke liye */
+      list-style-type: disc; 
       padding-left: 20px;
     }
     .card li {
@@ -60,3 +60,51 @@
      .card1 strong {
       color: #222;
     }
+
+    /*  */
+
+    
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:50px;
+  padding: 20px 80px;
+}
+
+.product-card {
+  width: 100%;
+  text-align:start;
+}
+
+
+.image-box {
+  width: 100%;
+}
+
+.image-box img {
+  width: 100%;  
+  height: auto;  
+  display: block;
+}
+
+.product-info {
+  padding-top: 10px;
+}
+
+.title {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.new-price {
+  color: #e53935;
+  font-weight: bold;
+  text-decoration: none;
+  font-size:20px;
+  text-align:start !important;
+
+}
+
+

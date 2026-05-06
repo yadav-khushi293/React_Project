@@ -1,11 +1,54 @@
+import  { useEffect, useState } from "react";
 import React from "react";
 import "../Cartpage/Cart.css";
+import axios from "axios";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const Cart =()=>{
+
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    const api_calling = async () => {
+      try {
+        const res = await axios.get(
+          "https://react-project-1s4c.onrender.com/cart"
+        );
+        setData(res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    api_calling();
+  }, []);
 
 
     return(
         <>
+
+ <div className="product-container">
+          {data.map((item) => (
+            <div className="product-card" key={item.id}>
+              
+              {/*Image Click = Add to Cart */}
+                <img src={item.img} alt={item.title} />
+
+              <div className="product-info">
+                <p className="title">{item.title}</p>
+
+                <div className="price-row">
+                  <span className="new-price">₹ {item.price}</span>
+                </div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+
+
+        {/*  */}
         <div className="parents">
           <div className="Description">Description</div>  
 

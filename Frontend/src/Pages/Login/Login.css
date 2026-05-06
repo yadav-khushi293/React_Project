@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    margin-bottom:10px;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:90px 0px;
+}
+
+.login-form {
+  padding: 30px 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.login-form input {
+  width:450px;
+  padding: 16px 15px;
+  font-size: 16px;
+  margin-bottom:21px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #999;
+}
+
+.forgot {
+  text-align: left;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #333;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.create-account {
+  font-size: 17px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.outer{
+    margin:10px 0px;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius:15px;
+  padding:7px 0px;
+  width:448px;
+  height:49px;
+  display: block;
+  background: linear-gradient(to right, white 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.button:hover {
+  background-position: left bottom;
+}
+
+.text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px; 
+  color:white;
+  transition: all .6s ease-out;
+  display: block;
+}
+
+.text:hover {
+  color:black;  
+}
+.gogindiv{
+    margin:50px 0px;
+}
