@@ -12,7 +12,8 @@ import "./App.css";
 // import { Accessories } from "./ProductPage/Accessories";
 // import { Ozark } from "./Pages/Ozark/ozark";
 // import { Footer } from "./ProductPage/Footer";
-import {Cart} from "./Pages/Cartpage/Cart"
+// import {Cart} from "./Pages/Cartpage/Cart";
+import {Sign_in} from "./Pages/Sign_in/Sign_in";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
 
       {/* <Footer /> */}
 
-      <Cart/>
+      {/* <Cart/> */}
+
+      <Sign_in/>
     </>
   );
 }
