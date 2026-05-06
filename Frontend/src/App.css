@@ -545,7 +545,8 @@ margin-top: 191px;
 }
 
 .women_footware_product>.background_img{
-  background: url();
+  background:
+  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/Utilis/Women_Footware.jpg);
 }
 
 .filter_sort_div{

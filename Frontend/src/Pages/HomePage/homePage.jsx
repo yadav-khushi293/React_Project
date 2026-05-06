@@ -138,7 +138,7 @@ export const HomePage = () => {
           </div>
         </NavLink>
 
-        <NavLink to="/">
+        <NavLink to="/women_topware">
           <div className="category_3">
             <div className="category_img3">
               <img
