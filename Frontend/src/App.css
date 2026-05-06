@@ -7,6 +7,11 @@
   font-family: "Lato", sans-serif;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 /* Navbar */
 
 .phone_navbar_div2{
@@ -491,11 +496,11 @@ cursor: pointer;
 
 /* Men Product Page */
 
-.men_product,.ozark_product{
+.men_product,.ozark_product,.men_footware_product,.topwear,.women_footware_product{
 margin-top: 191px;
 }
 
-.men_product>.background_img{
+.men_product>.background_img,.topwear>.background_img{
   background: 
   linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/Utilis/Men_Banner.webp);
   height: 100%;
@@ -509,12 +514,38 @@ margin-top: 191px;
   font-size: 45px;
 }
 
-.ozark_product>.background_img{
+.ozark_product>.background_img,.men_footware_product>.background_img,.women_footware_product>.background_img{
   background: url(/Utilis/Ozark_Banner.webp);
   margin: 0 151px;
   padding: 87.5px 0;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.men_footware_product>.background_img,.women_footware_product>.background_img{
+  text-align: center;
+  text-transform: capitalize;
+  padding: 117px 0;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 41px;
+  margin: 0 15px;
+  background: url(/Utilis/Men_Footware.jpg);
+  background-size: contain;
+}
+
+.topwear>.background_img{
+  background:  
+  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/Utilis/Mens_Topwear.webp);
+  background-size: contain;
+  background-position: right;
+  padding: 115px 0;
+  font-size: 41px;
+}
+
+.women_footware_product>.background_img{
+  background: url();
 }
 
 .filter_sort_div{
@@ -649,6 +680,7 @@ margin-top: 191px;
 .men_new_price, .ozark_new_price{
   color: #c4301c;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .hover-underline-animation.dark {
@@ -817,10 +849,18 @@ margin-top: 191px;
     -webkit-text-stroke: 1px currentColor;
 font-size: 21px;
 }
-.men_product>.background_img,.ozark_product>.background_img{
+.men_footware_product,.women_footware_product,.topwear{
+  margin-top: 195px;
+}
+.men_product>.background_img,.ozark_product>.background_img,.men_footware_product>.background_img,.women_footware_product>.background_img,.topwear>.background_img{
   padding: 5px 0;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.men_footware_product>.background_img,.women_footware_product>.background_img,.topwear>.background_img{
+  background-size: contain;
+  padding: 23px 0;
+  margin: 0 11px;
 }
 .ozark_product>.background_img{
   margin: 0 25px;
@@ -829,7 +869,7 @@ font-size: 21px;
   width: 100%;
   background-size: contain;
 }
-.ozark_product>.background_img>.img_text{
+.ozark_product>.background_img>.img_text,.men_footware_product>.background_img>.img_text,.women_footware_product>.background_img>.img_text,.topwear>.background_img>.img_text{
   font-size: 27px;
 }
 .ozark_category{
@@ -840,15 +880,15 @@ font-size: 21px;
   background: #ededed;
 }
 .filter_sort_div{
-  margin: 15px;
+  margin: 15px !important;
 }
 .filter{
   flex-direction: column-reverse;
 }
 .sort{
-  display: none;
+  display: none !important;
 }
-.men_product_div, .ozark_product_div{
+.men_product_div, .ozark_product_div,.men_footware_product,.women_footware_product,.topwear{
   grid-template-columns: repeat(2,1fr);
   margin: 21px 15px;
 }
@@ -858,7 +898,7 @@ font-size: 21px;
     .phone_navbar{
       justify-content: unset !important;
     }
-    .men_product,.ozark_product{
+    .men_product,.ozark_product,.men_footware_product,.women_footware_product,.topwear{
       margin-top: 211px;
     }
   }
@@ -925,7 +965,7 @@ font-size: 21px;
     overflow-x: scroll;
     justify-content: unset;
   }
-.men_product>.background_img{
+.men_product>.background_img,.men_footware_product>.background_img,.women_footware_product>.background_img,.topwear>.background_img{
   padding: 47px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -934,10 +974,10 @@ font-size: 21px;
   background: #ededed;
 }
 .filter_sort_div{
-  margin: 15px;
+  margin: 15px !important;
 }
 .sort{
-  display: none;
+  display: none !important;
 }
 .men_product_div, .ozark_product_div{
   grid-template-columns: repeat(3,1fr);
@@ -953,12 +993,12 @@ font-size: 21px;
     gap: 11px;
     padding-right: 21px;
   }
-.men_product>.background_img{
+.men_product>.background_img,.men_footware_product>.background_img,.women_footware_product>.background_img,.topwear>.background_img{
   padding: 73px 0;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .filter_sort_div,.men_product_div, .ozark_product_div{
-  margin: 15px 21px;
+  margin: 15px 21px !important;
 }
 }

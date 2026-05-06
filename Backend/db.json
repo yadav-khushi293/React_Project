@@ -162,51 +162,51 @@
     },
     {
       "id": 24,
-      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_13img.webp?raw=true",
-      "title": "Black Padded Jacket for Women",
-      "price": "1,358.00"
-    },
-    {
-      "id": 25,
       "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_14img.webp?raw=true",
       "title": "Women's Sliders",
       "price": "600.00"
     },
     {
-      "id": 26,
+      "id": 25,
       "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_15img.webp?raw=true",
       "title": "Women's Casual Shoes",
       "price": "1,122.00"
     },
     {
-      "id": 27,
+      "id": 26,
       "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_16img.webp?raw=true",
       "title": "Athleisure Sports Shoes for Women",
       "price": "1,360.00"
     },
     {
+      "id": 27,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_2img.webp?raw=true",
+      "title": "Pink & White Sneakers for Women",
+      "price": "1,003.00"
+    },
+    {
       "id": 28,
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_13img.webp?raw=true",
+      "title": "Black Padded Jacket for Women",
+      "price": "1,358.00"
+    },
+    {
+      "id": 29,
       "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_17img.webp?raw=true",
       "title": "T-Shirts for Women in Black",
       "price": "689.00"
     },
     {
-      "id": 29,
+      "id": 30,
       "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_18img.webp?raw=true",
       "title": "T-Shirts for Women in Black",
       "price": "1,199.00"
     },
     {
-      "id": 30,
+      "id": 31,
       "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_19img.webp?raw=true",
       "title": "Navy and White Polo T-Shirt for Women",
       "price": "1,079.00"
-    },
-    {
-      "id": 31,
-      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_20img.webp?raw=true",
-      "title": "Black Pants for Women",
-      "price": "1,529.00"
     },
     {
       "id": 32,
@@ -216,9 +216,9 @@
     },
     {
       "id": 33,
-      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_2img.webp?raw=true",
-      "title": "Pink & White Sneakers for Women",
-      "price": "1,003.00"
+      "img": "https://github.com/yadav-khushi293/PRACTICE/blob/main/w_20img.webp?raw=true",
+      "title": "Black Pants for Women",
+      "price": "1,529.00"
     },
     {
       "id": 34,

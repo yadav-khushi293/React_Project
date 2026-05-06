@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import React, { useEffect, useState, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
@@ -101,69 +102,77 @@ export const HomePage = () => {
       {/* Category Section */}
 
       <div className="category">
-        <div className="category_1">
-          <div className="category_img1">
-            <img
-              src="/Utilis/Category1.webp"
-              alt="Category Image 1"
-              className="category_img1"
-              loading="lazy"
-            />
-          </div>
+        <NavLink to="/men_footware">
+          <div className="category_1">
+            <div className="category_img1">
+              <img
+                src="/Utilis/Category1.webp"
+                alt="Category Image 1"
+                className="category_img1"
+                loading="lazy"
+              />
+            </div>
 
-          <div className="category_text">
-            <p className="category_p">Footwear</p>
-            <i className="bi bi-chevron-right"></i>
+            <div className="category_text">
+              <p className="category_p">Footwear</p>
+              <i className="bi bi-chevron-right"></i>
+            </div>
           </div>
-        </div>
+        </NavLink>
 
-        <div className="category_2">
-          <div className="category_img2">
-            <img
-              src="/Utilis/Category2.webp"
-              alt="Category Image 2"
-              className="category_img2"
-              loading="lazy"
-            />
-          </div>
+        <NavLink to="/men_topware">
+          <div className="category_2">
+            <div className="category_img2">
+              <img
+                src="/Utilis/Category2.webp"
+                alt="Category Image 2"
+                className="category_img2"
+                loading="lazy"
+              />
+            </div>
 
-          <div className="category_text">
-            <p className="category_p">Clothing</p>
-            <i className="bi bi-chevron-right"></i>
+            <div className="category_text">
+              <p className="category_p">Clothing</p>
+              <i className="bi bi-chevron-right"></i>
+            </div>
           </div>
-        </div>
+        </NavLink>
 
-        <div className="category_3">
-          <div className="category_img3">
-            <img
-              src="/Utilis/Category3..jpg"
-              alt="Category Image 3"
-              loading="lazy"
-              className="category_img3"
-            />
-          </div>
+        <NavLink to="/">
+          <div className="category_3">
+            <div className="category_img3">
+              <img
+                src="/Utilis/Category3..jpg"
+                alt="Category Image 3"
+                loading="lazy"
+                className="category_img3"
+              />
+            </div>
 
-          <div className="category_text">
-            <p className="category_p">New Arrival</p>
-            <i className="bi bi-chevron-right"></i>
+            <div className="category_text">
+              <p className="category_p">New Arrival</p>
+              <i className="bi bi-chevron-right"></i>
+            </div>
           </div>
-        </div>
+        </NavLink>
 
-        <div className="category_4">
-          <div className="category_img4">
-            <img
-              src="/Utilis/Category4.webp"
-              alt="Category Image 4"
-              loading="lazy"
-              className="category_img4"
-            />
-          </div>
+        <NavLink to="/accessories">
+          <div className="category_4">
+            <div className="category_img4">
+              <img
+                src="/Utilis/Category4.webp"
+                alt="Category Image 4"
+                loading="lazy"
+                className="category_img4"
+              />
+            </div>
 
-          <div className="category_text">
-            <p className="category_p">Accesories</p>
-            <i className="bi bi-chevron-right"></i>
+            <div className="category_text">
+              <p className="category_p">Accesories</p>
+              <i className="bi bi-chevron-right"></i>
+            </div>
           </div>
-        </div>
+        </NavLink>
       </div>
 
       <img
