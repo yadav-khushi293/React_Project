@@ -35,10 +35,8 @@ function App() {
 
       {/* <Footer /> */}
 
-      {/* <Cart/> */}
       {/* <Sign_in/> */}
       {/* <Login/> */}
-      {/* <Accessories/> */}
     </>
   );
 }
