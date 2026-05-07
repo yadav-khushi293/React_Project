@@ -592,6 +592,10 @@ margin-top: 191px;
   color: #fff;
 }
 
+.filter_div{
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .filter_price_button{
   background: linear-gradient(to right, #000 50%, #fff 50%);
   background-size:  200% 100%;

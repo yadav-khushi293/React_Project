@@ -9,6 +9,9 @@ export const Men = () => {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(2970);
   const [expand, setExpand] = useState(true);
+  const [color, setColor] = useState("");
+  const [origin, setOrigin] = useState("");
+  const [size, setSize] = useState("");
 
   useEffect(() => {
     const api_calling = async () => {
@@ -25,9 +28,37 @@ export const Men = () => {
     api_calling();
   }, []);
 
-  const filterData = data.filter(
-    (item) => item.price >= minPrice && item.price <= maxPrice,
-  );
+  const filterData = data.filter((item) => {
+    const itemPrice = Number(String(item.price).replace(/,/g, ""));
+
+    const matchPrice = itemPrice >= minPrice && itemPrice <= maxPrice;
+
+    const matchColor = color === "" || item.color === color;
+
+    const matchOrigin = origin === "" || item.origin === origin;
+
+    const matchSize = size === "" || item.size === size;
+
+    return matchPrice && matchColor && matchSize && matchOrigin;
+  });
+
+  // const count = (key, value) => {
+  //   return data.filter((item) => item[key] === value).length;
+  // };
+
+  // const colors = [...new Set(data.map((item) => item.color))].filter(Boolean);
+
+  // const origins = [...new Set(data.map((item) => item.origin))].filter(Boolean);
+
+  // const sizes = [...new Set(data.map((item) => item.size))].filter(Boolean);
+
+  // const sizeShort = {
+  //   Small: "S",
+  //   Medium: "M",
+  //   Big: "L",
+  //   "Extra-Big": "XL",
+  //   "Extra-Small": "XS",
+  // };
 
   return (
     <>
@@ -179,6 +210,10 @@ export const Men = () => {
                 onClick={() => {
                   setMinPrice(0);
                   setMaxPrice(2970);
+
+                  setColor("");
+                  setOrigin("");
+                  setSize("");
                 }}
               >
                 Clear All
