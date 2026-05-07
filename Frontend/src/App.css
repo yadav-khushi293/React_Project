@@ -106,7 +106,7 @@ a{
   /* padding-left: 200px; */
 }
 
-.icons>i,.search>i{
+.icons>i,.search>i,.icons>a>i{
   -webkit-text-stroke: 1px currentColor;
   font-size: 23px;
   cursor: pointer;

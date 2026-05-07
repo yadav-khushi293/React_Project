@@ -35,7 +35,9 @@ export const Navbar = () => {
             </div>
             <div className="icons">
               <i className="bi bi-person"></i>
-              <i className="bi bi-bag"></i>
+              <NavLink to="/cart">
+                <i className="bi bi-bag"></i>
+              </NavLink>
               <i className="bi bi-heart"></i>
             </div>
           </div>
@@ -58,7 +60,9 @@ export const Navbar = () => {
             </div>
             <div className="icons">
               <i className="bi bi-person"></i>
-              <i className="bi bi-bag"></i>
+              <NavLink to="/cart">
+                <i className="bi bi-bag"></i>
+              </NavLink>
               <i className="bi bi-heart"></i>
             </div>
           </div>
