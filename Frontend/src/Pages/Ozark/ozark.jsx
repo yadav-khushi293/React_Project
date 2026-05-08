@@ -12,9 +12,10 @@ export const Ozark = () => {
   const [colorExpand, setColorExpand] = useState(true);
   const [sizeExpand, setSizeExpand] = useState(true);
   const [originExpand, setOriginExpand] = useState(true);
-  const [color, setColor] = useState("");
-  const [origin, setOrigin] = useState("");
-  const [size, setSize] = useState("");
+  const [color, setColor] = useState([]);
+  const [showFilter, setShowFilter] = useState(true);
+  const [origin, setOrigin] = useState([]);
+  const [size, setSize] = useState([]);
 
   useEffect(() => {
     const api_calling = async () => {
@@ -36,11 +37,11 @@ export const Ozark = () => {
 
     const matchPrice = itemPrice >= minPrice && itemPrice <= maxPrice;
 
-    const matchColor = color === "" || item.color === color;
+    const matchColor = color.length === 0 || color.includes(item.color);
 
-    const matchOrigin = origin === "" || item.origin === origin;
+    const matchOrigin = origin.length === 0 || origin.includes(item.origin);
 
-    const matchSize = size === "" || item.size === size;
+    const matchSize = size.length === 0 || size.includes(item.size);
 
     return matchPrice && matchColor && matchSize && matchOrigin;
   });
@@ -81,6 +82,30 @@ export const Ozark = () => {
     "Extra-Small": "XS",
   };
 
+  const handleColor = (value) => {
+    if (color.includes(value)) {
+      setColor(color.filter((item) => item !== value));
+    } else {
+      setColor([...color, value]);
+    }
+  };
+
+  const handleOrigin = (value) => {
+    if (origin.includes(value)) {
+      setOrigin(origin.filter((item) => item !== value));
+    } else {
+      setOrigin([...origin, value]);
+    }
+  };
+
+  const handleSize = (value) => {
+    if (size.includes(value)) {
+      setSize(size.filter((item) => item !== value));
+    } else {
+      setSize([...size, value]);
+    }
+  };
+
   return (
     <>
       <div className="ozark_product">
@@ -111,11 +136,16 @@ export const Ozark = () => {
         </div>
         <div className="filter_sort_div">
           <div className="filter">
-            <div className="filter_child1">
+            <div
+              className="filter_child1"
+              onClick={() => setShowFilter(!showFilter)}
+            >
               <i className="bi bi-funnel"></i>
               <p>filter</p>
             </div>
-            <p>{filterData.length} products</p>
+            <p>
+              {filterData.length} of {data.length} products
+            </p>
           </div>
 
           <div className="sort">
@@ -136,7 +166,42 @@ export const Ozark = () => {
           </div>
         </div>
         <div className="men_product_div">
-          <div className="filter_main_div">
+          <div
+            className="filter_main_div"
+            style={{ display: showFilter ? "block" : "none" }}
+          >
+            <div className="active_filters">
+              {color.map((item) => (
+                <button
+                  className="active_filter_btn"
+                  key={item}
+                  onClick={() => setColor(color.filter((el) => el !== item))}
+                >
+                  {item} <i class="bi bi-x"></i>
+                </button>
+              ))}
+
+              {origin.map((item) => (
+                <button
+                  className="active_filter_btn"
+                  key={item}
+                  onClick={() => setOrigin(origin.filter((el) => el !== item))}
+                >
+                  {item} <i class="bi bi-x"></i>
+                </button>
+              ))}
+
+              {size.map((item) => (
+                <button
+                  className="active_filter_btn"
+                  key={item}
+                  onClick={() => setSize(size.filter((el) => el !== item))}
+                >
+                  {item} <i class="bi bi-x"></i>
+                </button>
+              ))}
+            </div>
+
             <div className="filter_div">
               <div className="filter_price">
                 <p>price</p>
@@ -237,8 +302,8 @@ export const Ozark = () => {
                       <div className="filter_option_child">
                         <input
                           type="checkbox"
-                          checked={size === item}
-                          onChange={() => setSize(size === item ? "" : item)}
+                          checked={size.includes(item)}
+                          onChange={() => handleSize(item)}
                         />
 
                         <span className="filter_option_text">
@@ -275,8 +340,8 @@ export const Ozark = () => {
                       <div className="filter_option_child">
                         <input
                           type="checkbox"
-                          checked={color === item}
-                          onChange={() => setColor(color === item ? "" : item)}
+                          checked={color.includes(item)}
+                          onChange={() => handleColor(item)}
                         />
 
                         <span className="filter_option_text">{item}</span>
@@ -311,10 +376,8 @@ export const Ozark = () => {
                       <div className="filter_option_child">
                         <input
                           type="checkbox"
-                          checked={origin === item}
-                          onChange={() =>
-                            setOrigin(origin === item ? "" : item)
-                          }
+                          checked={origin.includes(item)}
+                          onChange={() => handleOrigin(item)}
                         />
 
                         <span className="filter_option_text">{item}</span>
@@ -329,7 +392,7 @@ export const Ozark = () => {
           </div>
 
           {filterData.length > 0 ? (
-            <div className="men_product_child2">
+            <div className="men_product_child2" style={{width:showFilter?"75%":"100%"}}>
               {filterData.map((item) => (
                 <div className="ozark_product_card" key={item.id}>
                   <div className="heart_list">

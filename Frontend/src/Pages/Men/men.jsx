@@ -372,7 +372,10 @@ export const Men = () => {
           </div>
 
           {filterData.length > 0 ? (
-            <div className="men_product_child2" style={{width:showFilter?"75%":"100%"}}>
+            <div
+              className="men_product_child2"
+              style={{ width: showFilter ? "75%" : "100%" }}
+            >
               {filterData.slice().map((item) => (
                 <div className="men_product_card" key={item.id}>
                   <div className="heart_list">
