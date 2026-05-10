@@ -13,6 +13,7 @@ export const Men = () => {
   const [sizeExpand, setSizeExpand] = useState(true);
   const [originExpand, setOeiginExpand] = useState(true);
   const [showFilter, setShowFilter] = useState(true);
+  const [sort, setSort] = useState("date_old");
   const [color, setColor] = useState([]);
   const [origin, setOrigin] = useState([]);
   const [size, setSize] = useState([]);
@@ -45,6 +46,32 @@ export const Men = () => {
 
     return matchPrice && matchColor && matchSize && matchOrigin;
   });
+
+  const sortedData = [...filterData];
+
+  if (sort === "price_low") {
+    sortedData.sort((a, b) => {
+      const priceA = Number(String(a.price).replace(/,/g, ""));
+
+      const priceB = Number(String(b.price).replace(/,/g, ""));
+
+      return priceA - priceB;
+    });
+  } else if (sort === "price_high") {
+    sortedData.sort((a, b) => {
+      const priceA = Number(String(a.price).replace(/,/g, ""));
+
+      const priceB = Number(String(b.price).replace(/,/g, ""));
+
+      return priceB - priceA;
+    });
+  } else if (sort === "a_z") {
+    sortedData.sort((a, b) => a.title.loccalCompare(b.title));
+  } else if (sort === "z_a") {
+    sortedData.sort((a, b) => b.title.loccalCompare(a.title));
+  } else if (sort === "date_new") {
+    sortedData.reverse();
+  }
 
   const count = (key, value) => {
     return data.filter((item) => item[key] === value).length;
@@ -130,12 +157,12 @@ export const Men = () => {
           <div className="sort">
             <p>sort by:</p>
             <div className="sort_list">
-              <select defaultValue="date_old">
+              <select value={sort} onChange={(e) => setSort(e.target.value)}>
                 <option value="featured">featured</option>
                 <option value="most_relevant">most relevant</option>
                 <option value="best_selling">best selling</option>
-                <option value=" a_z">alphabetically, a-z</option>
-                <option value="a_z">alphabetically, z-a</option>
+                <option value="a_z">alphabetically, a-z</option>
+                <option value="z_a">alphabetically, z-a</option>
                 <option value="price_high">price, high to low</option>
                 <option value="price_low">price, low to high</option>
                 <option value="date_new">date, new to old</option>
@@ -371,12 +398,12 @@ export const Men = () => {
             </div>
           </div>
 
-          {filterData.length > 0 ? (
+          {sortedData.length > 0 ? (
             <div
               className="men_product_child2"
               style={{ width: showFilter ? "75%" : "100%" }}
             >
-              {filterData.slice().map((item) => (
+              {sortedData.slice().map((item) => (
                 <div className="men_product_card" key={item.id}>
                   <div className="heart_list">
                     <i className="bi bi-heart"></i>
