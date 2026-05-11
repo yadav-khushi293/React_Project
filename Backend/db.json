@@ -5,7 +5,7 @@
       "id": 1,
       "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe1.webp?raw=true",
       "title": "Casual Shoes for Men in Black and Grey | Lifestyle Shoes",
-      "sold": 421,
+      "sold": 451,
       "origin": "India",
       "size": "8",
       "featured": true,
@@ -17,7 +17,7 @@
       "img": "https://github.com/hetuk2005/webDevelopment/blob/main/Projects/Utilis/Men_Collections/Shoes/Shoe2.webp?raw=true",
       "title": "Sports Shoes for Men in White | Athleisure Shoes",
       "origin": "Myanmar",
-      "sold": 422,
+      "sold": 142,
       "featured": false,
       "size": "Medium",
       "color": "White",
@@ -42,7 +42,6 @@
       "featured": false,
       "sold": 424,
       "size": "7",
-      
       "color": "Black",
       "price": "1328.00"
     },

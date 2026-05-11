@@ -66,15 +66,15 @@ export const Men = () => {
       return priceB - priceA;
     });
   } else if (sort === "a_z") {
-    sortedData.sort((a, b) => a.title.loccalCompare(b.title));
+    sortedData.sort((a, b) => a.title.localeCompare(b.title));
   } else if (sort === "z_a") {
-    sortedData.sort((a, b) => b.title.loccalCompare(a.title));
+    sortedData.sort((a, b) => b.title.localeCompare(a.title));
   } else if (sort === "date_new") {
     sortedData.reverse();
   } else if (sort === "best_selling") {
-    sortedData.data((a, b) => b.sold - a.sold);
+    sortedData.sort((a, b) => b.sold - a.sold);
   } else if (sort === "featured") {
-    sortedData.data((a, b) => b.featured - a.featured);
+    sortedData.sort((a, b) => b.featured - a.featured);
   }
 
   const count = (key, value) => {
