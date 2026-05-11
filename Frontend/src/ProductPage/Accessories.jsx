@@ -45,7 +45,7 @@ export const Accessories = () => {
 
       if (res.ok) {
         localStorage.setItem("selectedProductId", item.id);
-        navigate("../Pages/Cartpage/Cart.jsx");
+        navigate("/Cart");
       } else {
         console.log("Failed to add to cart");
       }

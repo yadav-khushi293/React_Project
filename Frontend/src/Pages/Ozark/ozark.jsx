@@ -16,6 +16,7 @@ export const Ozark = () => {
   const [showFilter, setShowFilter] = useState(true);
   const [origin, setOrigin] = useState([]);
   const [size, setSize] = useState([]);
+  const [sort, setSort] = useState("date_old");
 
   useEffect(() => {
     const api_calling = async () => {
@@ -45,6 +46,36 @@ export const Ozark = () => {
 
     return matchPrice && matchColor && matchSize && matchOrigin;
   });
+
+  const sortedData = [...filterData];
+
+  if (sort === "price_low") {
+    sortedData.sort((a, b) => {
+      const priceA = Number(String(a.price).replace(/,/g, ""));
+
+      const priceB = Number(String(b.price).replace(/,/g, ""));
+
+      return priceA - priceB;
+    });
+  } else if (sort === "price_high") {
+    sortedData.sort((a, b) => {
+      const priceA = Number(String(a.price).replace(/,/g, ""));
+
+      const priceB = Number(String(b.price).replace(/,/g, ""));
+
+      return priceB - priceA;
+    });
+  } else if (sort === "a_z") {
+    sortedData.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sort === "z_a") {
+    sortedData.sort((a, b) => b.title.localeCompare(a.title));
+  } else if (sort === "date_new") {
+    sortedData.reverse();
+  } else if (sort === "best_selling") {
+    sortedData.sort((a, b) => b.sold - a.sold);
+  } else if (sort === "featured") {
+    sortedData.sort((a, b) => b.featured - a.featured);
+  }
 
   const count = (key, value) => {
     return data.filter((item) => item[key] === value).length;
@@ -151,12 +182,15 @@ export const Ozark = () => {
           <div className="sort">
             <p>sort by:</p>
             <div className="sort_list">
-              <select defaultValue="best_selling">
+              <select
+                defaultValue="best_selling"
+                onChange={(e) => setSort(e.target.value)}
+              >
                 <option value="featured">featured</option>
                 <option value="most_relevant">most relevant</option>
                 <option value="best_selling">Best Selling</option>
-                <option value=" a_z">alphabetically, a-z</option>
-                <option value="a_z">alphabetically, z-a</option>
+                <option value="a_z">alphabetically, a-z</option>
+                <option value="z_a">alphabetically, z-a</option>
                 <option value="price_high">price, high to low</option>
                 <option value="price_low">price, low to high</option>
                 <option value="date_new">date, new to old</option>
@@ -391,9 +425,12 @@ export const Ozark = () => {
             </div>
           </div>
 
-          {filterData.length > 0 ? (
-            <div className="men_product_child2" style={{width:showFilter?"75%":"100%"}}>
-              {filterData.map((item) => (
+          {sortedData.length > 0 ? (
+            <div
+              className="men_product_child2"
+              style={{ width: showFilter ? "75%" : "100%" }}
+            >
+              {sortedData.map((item) => (
                 <div className="ozark_product_card" key={item.id}>
                   <div className="heart_list">
                     <i className="bi bi-heart"></i>
