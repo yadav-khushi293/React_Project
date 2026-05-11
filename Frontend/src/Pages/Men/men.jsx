@@ -71,6 +71,10 @@ export const Men = () => {
     sortedData.sort((a, b) => b.title.loccalCompare(a.title));
   } else if (sort === "date_new") {
     sortedData.reverse();
+  } else if (sort === "best_selling") {
+    sortedData.data((a, b) => b.sold - a.sold);
+  } else if (sort === "featured") {
+    sortedData.data((a, b) => b.featured - a.featured);
   }
 
   const count = (key, value) => {
