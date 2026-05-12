@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
@@ -7,7 +8,7 @@ import "../../App.css";
 export const Men = () => {
   const [data, setData] = useState([]);
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(2970);
+  const [maxPrice, setMaxPrice] = useState(0);
   const [expand, setExpand] = useState(true);
   const [colorExpand, setColorExpand] = useState(true);
   const [sizeExpand, setSizeExpand] = useState(true);
@@ -17,6 +18,9 @@ export const Men = () => {
   const [color, setColor] = useState([]);
   const [origin, setOrigin] = useState([]);
   const [size, setSize] = useState([]);
+  const navigate = useNavigate();
+
+  const Cartapi = "https://react-project-1s4c.onrender.com/cart";
 
   useEffect(() => {
     const api_calling = async () => {
@@ -33,6 +37,45 @@ export const Men = () => {
     api_calling();
   }, []);
 
+  // Add to Cart Function
+  const handleAddToCart = async (item) => {
+    const cartObj = {
+      id: item.id,
+      title: item.title,
+      img: item.img,
+      price: item.price,
+    };
+
+    try {
+      const res = await fetch(Cartapi, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartObj),
+      });
+
+      if (res.ok) {
+        localStorage.setItem("selectedProductId", item.id);
+        navigate("/Cart");
+      } else {
+        console.log("Failed to add to cart");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Filter Function Logic
+
+  const highestPrice = Math.max(
+    ...data.map((item) => Number(String(item.price).replace(/,/g, "")), 0),
+  );
+
+  useEffect(() => {
+    setMaxPrice(highestPrice);
+  }, [highestPrice]);
+
   const filterData = data.filter((item) => {
     const itemPrice = Number(String(item.price).replace(/,/g, ""));
 
@@ -46,36 +89,6 @@ export const Men = () => {
 
     return matchPrice && matchColor && matchSize && matchOrigin;
   });
-
-  const sortedData = [...filterData];
-
-  if (sort === "price_low") {
-    sortedData.sort((a, b) => {
-      const priceA = Number(String(a.price).replace(/,/g, ""));
-
-      const priceB = Number(String(b.price).replace(/,/g, ""));
-
-      return priceA - priceB;
-    });
-  } else if (sort === "price_high") {
-    sortedData.sort((a, b) => {
-      const priceA = Number(String(a.price).replace(/,/g, ""));
-
-      const priceB = Number(String(b.price).replace(/,/g, ""));
-
-      return priceB - priceA;
-    });
-  } else if (sort === "a_z") {
-    sortedData.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (sort === "z_a") {
-    sortedData.sort((a, b) => b.title.localeCompare(a.title));
-  } else if (sort === "date_new") {
-    sortedData.reverse();
-  } else if (sort === "best_selling") {
-    sortedData.sort((a, b) => b.sold - a.sold);
-  } else if (sort === "featured") {
-    sortedData.sort((a, b) => b.featured - a.featured);
-  }
 
   const count = (key, value) => {
     return data.filter((item) => item[key] === value).length;
@@ -136,6 +149,38 @@ export const Men = () => {
       setSize([...size, value]);
     }
   };
+
+  // Sorting Function Logic
+
+  const sortedData = [...filterData];
+
+  if (sort === "price_low") {
+    sortedData.sort((a, b) => {
+      const priceA = Number(String(a.price).replace(/,/g, ""));
+
+      const priceB = Number(String(b.price).replace(/,/g, ""));
+
+      return priceA - priceB;
+    });
+  } else if (sort === "price_high") {
+    sortedData.sort((a, b) => {
+      const priceA = Number(String(a.price).replace(/,/g, ""));
+
+      const priceB = Number(String(b.price).replace(/,/g, ""));
+
+      return priceB - priceA;
+    });
+  } else if (sort === "a_z") {
+    sortedData.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sort === "z_a") {
+    sortedData.sort((a, b) => b.title.localeCompare(a.title));
+  } else if (sort === "date_new") {
+    sortedData.reverse();
+  } else if (sort === "best_selling") {
+    sortedData.sort((a, b) => b.sold - a.sold);
+  } else if (sort === "featured") {
+    sortedData.sort((a, b) => b.featured - a.featured);
+  }
 
   return (
     <>
@@ -230,19 +275,22 @@ export const Men = () => {
 
               {expand && (
                 <>
-                  <p className="highest_price">the highest price is ₹ 2,970</p>
+                  <p className="highest_price">
+                    the highest price is ₹{" "}
+                    {highestPrice.toLocaleString("en-IN")}
+                  </p>
 
                   <div
                     className="range_slider"
                     style={{
-                      "--min": `${(minPrice / 2970) * 100}%`,
-                      "--max": `${(maxPrice / 2970) * 100}%`,
+                      "--min": `${(minPrice / highestPrice) * 100}%`,
+                      "--max": `${(maxPrice / highestPrice) * 100}%`,
                     }}
                   >
                     <input
                       type="range"
                       min="0"
-                      max="2970"
+                      max={highestPrice}
                       value={minPrice}
                       onChange={(e) => setMinPrice(Number(e.target.value))}
                     />
@@ -250,7 +298,7 @@ export const Men = () => {
                     <input
                       type="range"
                       min="0"
-                      max="2970"
+                      max={highestPrice}
                       value={maxPrice}
                       onChange={(e) => setMaxPrice(Number(e.target.value))}
                     />
@@ -413,7 +461,11 @@ export const Men = () => {
                     <i className="bi bi-heart"></i>
                   </div>
 
-                  <div className="men_image">
+                  <div
+                    className="men_image"
+                    onClick={() => handleAddToCart(item)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <img src={item.img} alt={item.title} loading="lazy" />
                   </div>
 
@@ -438,7 +490,7 @@ export const Men = () => {
                 className="filter_price_button"
                 onClick={() => {
                   setMinPrice(0);
-                  setMaxPrice(2970);
+                  setMaxPrice(highestPrice);
 
                   setColor("");
                   setOrigin("");

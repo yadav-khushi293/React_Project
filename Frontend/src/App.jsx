@@ -13,8 +13,8 @@ import { Accessories } from "./ProductPage/Accessories";
 import { Ozark } from "./Pages/Ozark/ozark";
 import { Footer } from "./ProductPage/Footer";
 import { Cart } from "./Pages/Cartpage/Cart";
-// import {Sign_in} from "./Pages/Sign_in/Sign_in";
-// import {Login} from "./Pages/Login/Login"
+import { Sign_in } from "./Pages/Sign_in/Sign_in";
+import { Login } from "./Pages/Login/Login";
 
 function App() {
   return (
@@ -31,6 +31,8 @@ function App() {
         <Route path="/accessories" element={<Accessories />}></Route>
         <Route path="/ozark" element={<Ozark />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/sign_in" element={<Sign_in />}></Route>
       </Routes>
 
       {/* <Footer /> */}
