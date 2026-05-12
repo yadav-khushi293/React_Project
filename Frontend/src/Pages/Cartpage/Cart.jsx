@@ -5,8 +5,20 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 export const Cart = () => {
   const [data, setData] = useState([]);
-  const [quantity, setQuantity] = useState( Number(localStorage.getItem("quantity")) || 1
-);
+
+  // localStorage se id lena
+  const selectedProductId = localStorage.getItem("selectedProductId");
+
+  // quantity state
+  const [quantity, setQuantity] = useState(() => {
+    return (
+      Number(
+        localStorage.getItem(
+          `quantity_${selectedProductId}`
+        )
+      ) || 1
+    );
+  });
 
   useEffect(() => {
     const api_calling = async () => {
@@ -24,36 +36,42 @@ export const Cart = () => {
     api_calling();
   }, []);
 
-  // localStorage se id lena
-  const selectedProductId = localStorage.getItem("selectedProductId");
-
   // matching product find karna
-  const product = data.find((p) => p.id == selectedProductId);
+  const product = data.find(
+    (p) => p.id == selectedProductId
+  );
 
   // increment
- const handleIncrement = () => {
-  const newQty = quantity + 1;
-
-  setQuantity(newQty);
-
-  localStorage.setItem("quantity", newQty);
-};
-
-  // decrement
-const handleDecrement = () => {
-  if (quantity > 1) {
-
-    const newQty = quantity - 1;
+  const handleIncrement = () => {
+    const newQty = quantity + 1;
 
     setQuantity(newQty);
 
-    localStorage.setItem("quantity", newQty);
-  }
-};
+    localStorage.setItem(
+      `quantity_${selectedProductId}`,
+      newQty
+    );
+  };
+
+  // decrement
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      const newQty = quantity - 1;
+
+      setQuantity(newQty);
+
+      localStorage.setItem(
+        `quantity_${selectedProductId}`,
+        newQty
+      );
+    }
+  };
 
   // total price
   const totalPrice = product
-    ? parseFloat(product.price.toString().replace(/,/g, "")) * quantity
+    ? parseFloat(
+        product.price.toString().replace(/,/g, "")
+      ) * quantity
     : 0;
 
   return (

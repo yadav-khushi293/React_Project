@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Navbar />
-
+{
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/men" element={<Men />}></Route>
@@ -31,14 +31,14 @@ function App() {
         <Route path="/accessories" element={<Accessories />}></Route>
         <Route path="/ozark" element={<Ozark />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
-      </Routes>
+      </Routes> }
 
       {/* <Footer /> */}
 
       {/* <Cart/> */}
-      {/* <Sign_in/> */}
-      {/* <Login/> */}
-      {/* <Accessories/> */}
+      {/* <Sign_in/>
+      <Login/> */}
+      <Accessories/>
     </>
   );
 }
