@@ -290,7 +290,7 @@ export const Men = () => {
                     <input
                       type="range"
                       min="0"
-                      max={highestPrice}
+                      max={minPrice}
                       value={minPrice}
                       onChange={(e) => setMinPrice(Number(e.target.value))}
                     />
