@@ -66,12 +66,15 @@ export const Topware = () => {
     }
   };
 
-  const topwearData = data.filter((item) => item.category === "topwear");
+  const topwearData = data.filter((item) => item.category === "topware");
 
   // Filter Function Logic
 
   const highestPrice = Math.max(
-    ...data.map((item) => Number(String(item.price).replace(/,/g, "")), 0),
+    ...topwearData.map(
+      (item) => Number(String(item.price).replace(/,/g, "")),
+      0,
+    ),
   );
 
   useEffect(() => {
@@ -93,12 +96,16 @@ export const Topware = () => {
   });
 
   const count = (key, value) => {
-    return data.filter((item) => item[key] === value).length;
+    return topwearData.filter((item) => item[key] === value).length;
   };
 
-  const colors = [...new Set(data.map((item) => item.color))].filter(Boolean);
+  const colors = [...new Set(topwearData.map((item) => item.color))].filter(
+    Boolean,
+  );
 
-  const origins = [...new Set(data.map((item) => item.origin))].filter(Boolean);
+  const origins = [...new Set(topwearData.map((item) => item.origin))].filter(
+    Boolean,
+  );
 
   const sizeOrder = [
     "Extra-Small",
@@ -116,7 +123,7 @@ export const Topware = () => {
     "8",
   ];
 
-  const sizes = [...new Set(data.map((item) => item.size))]
+  const sizes = [...new Set(topwearData.map((item) => item.size))]
     .filter(Boolean)
     .sort((a, b) => sizeOrder.indexOf(a) - sizeOrder.indexOf(b));
 
@@ -186,7 +193,7 @@ export const Topware = () => {
 
   return (
     <>
-      <div className="topware">
+      <div className="topwear">
         <div className="background_img">
           <p className="img_text">topware</p>
         </div>
@@ -201,7 +208,7 @@ export const Topware = () => {
               <p>filter</p>
             </div>
             <p>
-              {filterData.length} of {data.length} products
+              {filterData.length} of {topwearData.length} products
             </p>
           </div>
 

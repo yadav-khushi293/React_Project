@@ -66,17 +66,24 @@ export const Footware = () => {
     }
   };
 
+  const men_footwareData = data.filter(
+    (item) => item.category === "men_footware",
+  );
+
   // Filter Function Logic
 
   const highestPrice = Math.max(
-    ...data.map((item) => Number(String(item.price).replace(/,/g, "")), 0),
+    ...men_footwareData.map(
+      (item) => Number(String(item.price).replace(/,/g, "")),
+      0,
+    ),
   );
 
   useEffect(() => {
     setMaxPrice(highestPrice);
   }, [highestPrice]);
 
-  const filterData = data.filter((item) => {
+  const filterData = men_footwareData.filter((item) => {
     const itemPrice = Number(String(item.price).replace(/,/g, ""));
 
     const matchPrice = itemPrice >= minPrice && itemPrice <= maxPrice;
@@ -91,12 +98,16 @@ export const Footware = () => {
   });
 
   const count = (key, value) => {
-    return data.filter((item) => item[key] === value).length;
+    return men_footwareData.filter((item) => item[key] === value).length;
   };
 
-  const colors = [...new Set(data.map((item) => item.color))].filter(Boolean);
+  const colors = [
+    ...new Set(men_footwareData.map((item) => item.color)),
+  ].filter(Boolean);
 
-  const origins = [...new Set(data.map((item) => item.origin))].filter(Boolean);
+  const origins = [
+    ...new Set(men_footwareData.map((item) => item.origin)),
+  ].filter(Boolean);
 
   const sizeOrder = [
     "Extra-Small",
@@ -114,7 +125,7 @@ export const Footware = () => {
     "8",
   ];
 
-  const sizes = [...new Set(data.map((item) => item.size))]
+  const sizes = [...new Set(men_footwareData.map((item) => item.size))]
     .filter(Boolean)
     .sort((a, b) => sizeOrder.indexOf(a) - sizeOrder.indexOf(b));
 
@@ -199,7 +210,7 @@ export const Footware = () => {
               <p>filter</p>
             </div>
             <p>
-              {filterData.length} of {data.length} products
+              {filterData.length} of {men_footwareData.length} products
             </p>
           </div>
 

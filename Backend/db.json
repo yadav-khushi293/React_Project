@@ -1,4 +1,5 @@
 {
+  "login": [],
   "cart": [],
   "men": [
     {
@@ -322,6 +323,7 @@
       "sold": 447,
       "origin": "Myanmar",
       "featured": true,
+      "category": "footware",
       "size": "Small",
       "color": "White",
       "price": "1,003.00"

@@ -71,7 +71,10 @@ export const Women_Footware = () => {
   // Filter Function Logic
 
   const highestPrice = Math.max(
-    ...data.map((item) => Number(String(item.price).replace(/,/g, "")), 0),
+    ...footwareData.map(
+      (item) => Number(String(item.price).replace(/,/g, "")),
+      0,
+    ),
   );
 
   useEffect(() => {
@@ -93,12 +96,16 @@ export const Women_Footware = () => {
   });
 
   const count = (key, value) => {
-    return data.filter((item) => item[key] === value).length;
+    return footwareData.filter((item) => item[key] === value).length;
   };
 
-  const colors = [...new Set(data.map((item) => item.color))].filter(Boolean);
+  const colors = [...new Set(footwareData.map((item) => item.color))].filter(
+    Boolean,
+  );
 
-  const origins = [...new Set(data.map((item) => item.origin))].filter(Boolean);
+  const origins = [...new Set(footwareData.map((item) => item.origin))].filter(
+    Boolean,
+  );
 
   const sizeOrder = [
     "Extra-Small",
@@ -116,7 +123,7 @@ export const Women_Footware = () => {
     "8",
   ];
 
-  const sizes = [...new Set(data.map((item) => item.size))]
+  const sizes = [...new Set(footwareData.map((item) => item.size))]
     .filter(Boolean)
     .sort((a, b) => sizeOrder.indexOf(a) - sizeOrder.indexOf(b));
 
@@ -201,7 +208,7 @@ export const Women_Footware = () => {
               <p>filter</p>
             </div>
             <p>
-              {filterData.length} of {data.length} products
+              {filterData.length} of {footwareData.length} products
             </p>
           </div>
 
