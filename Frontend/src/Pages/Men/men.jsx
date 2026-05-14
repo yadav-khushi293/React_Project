@@ -39,6 +39,16 @@ export const Men = () => {
 
   // Add to Cart Function
   const handleAddToCart = async (item) => {
+    const isLoggedIn = localStorage.getItem("user");
+
+    if (!isLoggedIn) {
+      alert("Please Login First");
+
+      navigate("/login");
+
+      return;
+    }
+
     const cartObj = {
       id: item.id,
       title: item.title,
@@ -290,7 +300,7 @@ export const Men = () => {
                     <input
                       type="range"
                       min="0"
-                      max={minPrice}
+                      max={highestPrice}
                       value={minPrice}
                       onChange={(e) => setMinPrice(Number(e.target.value))}
                     />
@@ -455,7 +465,7 @@ export const Men = () => {
               className="men_product_child2"
               style={{ width: showFilter ? "75%" : "100%" }}
             >
-              {sortedData.slice().map((item) => (
+              {sortedData.map((item) => (
                 <div className="men_product_card" key={item.id}>
                   <div className="heart_list">
                     <i className="bi bi-heart"></i>
@@ -492,9 +502,9 @@ export const Men = () => {
                   setMinPrice(0);
                   setMaxPrice(highestPrice);
 
-                  setColor("");
-                  setOrigin("");
-                  setSize("");
+                  setColor([]);
+                  setOrigin([]);
+                  setSize([]);
                 }}
               >
                 Clear All

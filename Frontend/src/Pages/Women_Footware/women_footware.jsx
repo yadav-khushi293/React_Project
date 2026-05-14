@@ -39,6 +39,16 @@ export const Women_Footware = () => {
 
   // Add to Cart Function
   const handleAddToCart = async (item) => {
+    const isLoggedIn = localStorage.getItem("user");
+
+    if (!isLoggedIn) {
+      alert("Please Login First");
+
+      navigate("/login");
+
+      return;
+    }
+
     const cartObj = {
       id: item.id,
       title: item.title,
@@ -299,7 +309,7 @@ export const Women_Footware = () => {
                     <input
                       type="range"
                       min="0"
-                      max={minPrice}
+                      max={highestPrice}
                       value={minPrice}
                       onChange={(e) => setMinPrice(Number(e.target.value))}
                     />
@@ -501,9 +511,9 @@ export const Women_Footware = () => {
                   setMinPrice(0);
                   setMaxPrice(highestPrice);
 
-                  setColor("");
-                  setOrigin("");
-                  setSize("");
+                  setColor([]);
+                  setOrigin([]);
+                  setSize([]);
                 }}
               >
                 Clear All

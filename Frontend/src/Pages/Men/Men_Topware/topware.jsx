@@ -39,6 +39,16 @@ export const Topware = () => {
 
   // Add to Cart Function
   const handleAddToCart = async (item) => {
+    const isLoggedIn = localStorage.getItem("user");
+
+    if (!isLoggedIn) {
+      alert("Please Login First");
+
+      navigate("/login");
+
+      return;
+    }
+
     const cartObj = {
       id: item.id,
       title: item.title,

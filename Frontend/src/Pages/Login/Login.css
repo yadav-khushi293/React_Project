@@ -70,11 +70,11 @@ h1{
     margin:10px 0px;
 }
 
-.button {
+.text {
   display: inline-block;
-  width: 449px;
+  width: 100%;
   height: 49px;
-  line-height: 49px;
+  line-height: 29px;
   text-align: center;
 
   border-radius: 50px;
@@ -96,7 +96,7 @@ h1{
 
 /* Base Background */
 
-.button::after {
+.text::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -107,7 +107,7 @@ h1{
 
 /* Animated Layer */
 
-.button::before {
+.text::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -121,27 +121,14 @@ h1{
 
 /* Hover Animation */
 
-.button:hover::before {
+.text:hover::before {
   width: 100%;
 }
 
-.button:hover {
+.text:hover {
   color: black;
 }
 
-.text {
-  text-align: center;
-  font-size: 19px;
-  font-weight: bold;
-  line-height: 30px; 
-  color:white;
-  transition: all .6s ease-out;
-  display: block;
-}
-
-.text:hover {
-  color:black;  
-}
 .gogindiv{
     margin:50px 0px;
 }
