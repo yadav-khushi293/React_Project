@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import "../Cartpage/Cart.css";
+import "./Detail_Page.css";
 
-export const Cart = () => {
+export const Page = () => {
   const [data, setData] = useState([]);
   const [quantity, setQuantity] = useState(
     Number(localStorage.getItem("quantity")) || 1,
