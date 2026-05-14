@@ -34,7 +34,9 @@ export const Navbar = () => {
               <i className="bi bi-search"></i>
             </div>
             <div className="icons">
-              <i className="bi bi-person"></i>
+              <NavLink to="/login">
+                <i className="bi bi-person"></i>
+              </NavLink>
               <NavLink to="/cart">
                 <i className="bi bi-bag"></i>
               </NavLink>

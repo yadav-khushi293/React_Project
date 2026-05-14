@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.sign_in{
+  margin-top: 231px;
+}
 .Create_account{
     text-align: center;
     font-weight: bold;
@@ -43,54 +46,11 @@
   border-color: #999;
 }
 
-/* .signup-form button {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 25px;
-  background-color: black;
-  color: white;
-  font-size: 18px;
+.login_account{
+  text-decoration: underline;
   cursor: pointer;
-} */
-
-/* .signup-form button:hover {
-  background-color: #fff;
-  co
-} */
-
-
-.outer{
-    margin:10px 0px;
-}
-
-.button {
-  border: 1px solid black;
-  border-radius:15px;
-  padding:7px 0px;
-  width: 550px;
-  height:49px;
+  font-size: 17px;
+  width: 10%;
   display: block;
-  background: linear-gradient(to right, white 50%, black 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-}
-
-.button:hover {
-  background-position: left bottom;
-}
-
-.text {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px; 
-  color:white;
-  transition: all .6s ease-out;
-  display: block;
-}
-
-.text:hover {
-  color:black;  
+  margin: auto;
 }

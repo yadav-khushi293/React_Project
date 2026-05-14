@@ -10,7 +10,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:90px 0px;
+  margin:141px 0px;
 }
 
 .login-form {
@@ -70,36 +70,65 @@ h1{
     margin:10px 0px;
 }
 
-.button {
-  border: 1px solid black;
-  border-radius:15px;
-  padding:7px 0px;
-  width:448px;
-  height:49px;
-  display: block;
-  background: linear-gradient(to right, white 50%, black 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-}
-
-.button:hover {
-  background-position: left bottom;
-}
-
 .text {
+  display: inline-block;
+  width: 100%;
+  height: 49px;
+  line-height: 29px;
   text-align: center;
-  font-size: 18px;
+
+  border-radius: 50px;
+  border: 1px solid black;
+  padding: 7px 0;
+
+  color: white;
+  font-size: 19px;
   font-weight: bold;
-  line-height: 30px; 
-  color:white;
-  transition: all .6s ease-out;
-  display: block;
+  text-decoration: none;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+/* Base Background */
+
+.text::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  border-radius: 50px;
+  z-index: -2;
+}
+
+/* Animated Layer */
+
+.text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: white;
+  border-radius: 50px;
+  z-index: -1;
+
+  transition: all 0.5s ease;
+}
+
+/* Hover Animation */
+
+.text:hover::before {
+  width: 100%;
 }
 
 .text:hover {
-  color:black;  
+  color: black;
 }
+
 .gogindiv{
     margin:50px 0px;
 }
