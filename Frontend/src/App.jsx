@@ -11,8 +11,8 @@ import { ProdectPages } from "./ProductPage/ProductPages";
 import { Women_Footware } from "./Pages/Women_Footware/women_footware";
 import { Accessories } from "./ProductPage/Accessories";
 import { Ozark } from "./Pages/Ozark/ozark";
+import { Cart } from "./Pages/HomePage/Cart";
 import { Footer } from "./ProductPage/Footer";
-import { Cart } from "./Pages/Cartpage/Cart";
 import { Sign_in } from "./Pages/Sign_in/Sign_in";
 import { Login } from "./Pages/Login/Login";
 

@@ -1,6 +1,5 @@
 import  { useEffect, useState } from "react";
 import React from "react";
-import "../Cartpage/Cart.css";
 import axios from "axios";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 

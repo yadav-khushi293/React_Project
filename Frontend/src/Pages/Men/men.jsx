@@ -67,7 +67,7 @@ export const Men = () => {
 
       if (res.ok) {
         localStorage.setItem("selectedProductId", item.id);
-        navigate("/Cart");
+        navigate("/Page");
       } else {
         console.log("Failed to add to cart");
       }
