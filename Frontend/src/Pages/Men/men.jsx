@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Api } from "../../Api/Api";
+
 import "../../App.css";
+
+const api_calling = async () => {
+  const res = await Api("/men");
+  return res;
+};
 
 export const Men = () => {
   const [data, setData] = useState([]);
@@ -19,16 +25,9 @@ export const Men = () => {
   const [size, setSize] = useState([]);
 
   useEffect(() => {
-    const api_calling = async () => {
-      try {
-        const res = await Api.get("/men");
-        setData(res.data);
-      } catch (error) {
-        console.log("✈️  error: ", error);
-      }
-    };
-
-    api_calling();
+    api_calling()
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
   // Filter Function Logic

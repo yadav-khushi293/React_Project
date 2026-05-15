@@ -4,20 +4,18 @@ import { Api } from "../Api/Api";
 import "../ProductPage/Accessories.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+const api_calling = async () => {
+  const res = await Api("/accessories");
+  return res;
+};
+
 export const Accessories = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const api_calling = async () => {
-      try {
-        const res = await Api.get("/accessories");
-        setData(res.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    api_calling();
+    api_calling()
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
   return (

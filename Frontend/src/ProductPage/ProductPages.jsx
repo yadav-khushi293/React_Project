@@ -4,22 +4,16 @@ import "../ProductPage/ProdectPages.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Api } from "../Api/Api";
 
+const api_calling = async () => {
+  const res = await Api("/women");
+  return res;
+}
+
 export const ProdectPages = () => {
   const [data, setData] = useState([]);
 
-  const Cartapi = "https://react-project-1s4c.onrender.com/cart";
-
   useEffect(() => {
-    const api_calling = async () => {
-      try {
-        const res = await Api.get("/women");
-        setData(res.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    api_calling();
+    api_calling().then((res)=>setData(res.data)).catch((err)=>console.log(err));
   }, []);
 
   return (
