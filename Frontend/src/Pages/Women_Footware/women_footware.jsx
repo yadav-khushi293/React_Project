@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
 import { Api } from "../../Api/Api";
+import { Breadcrumb } from "../HomePage/BreadCrumb";
 
 const api_calling = async () => {
-  const res = await Api("/men");
+  const res = await Api("/women");
   return res;
 };
 
@@ -16,6 +17,7 @@ export const Women_Footware = () => {
   const [expand, setExpand] = useState(true);
   const [colorExpand, setColorExpand] = useState(true);
   const [sizeExpand, setSizeExpand] = useState(true);
+    const [load, setLoad] = useState(true);
   const [originExpand, setOeiginExpand] = useState(true);
   const [showFilter, setShowFilter] = useState(true);
   const [sort, setSort] = useState("date_old");
@@ -24,6 +26,8 @@ export const Women_Footware = () => {
   const [size, setSize] = useState([]);
 
   useEffect(() => {
+    setLoad(true);
+
     api_calling()
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
@@ -34,10 +38,8 @@ export const Women_Footware = () => {
   // Filter Function Logic
 
   const highestPrice = Math.max(
-    ...footwareData.map(
-      (item) => Number(String(item.price).replace(/,/g, "")),
-      0,
-    ),
+    ...footwareData.map((item) => Number(String(item.price).replace(/,/g, ""))),
+    0,
   );
 
   useEffect(() => {
@@ -157,6 +159,17 @@ export const Women_Footware = () => {
   return (
     <>
       <div className="women_footware_product">
+        <Breadcrumb
+          paths={[
+            {
+              name: "Women",
+              link: "/women",
+            },
+            {
+              name: "Women Footwear",
+            },
+          ]}
+        />
         <div className="background_img">
           <p className="img_text">women footware</p>
         </div>
@@ -422,7 +435,16 @@ export const Women_Footware = () => {
             </div>
           </div>
 
-          {sortedData.length > 0 ? (
+          {load ? (
+            <div
+              className="men_product_child2"
+              style={{ width: showFilter ? "75%" : "100%" }}
+            >
+              <div className="loader_container">
+                <div className="loader"></div>
+              </div>
+            </div>
+          ) : sortedData.length > 0 ? (
             <div
               className="men_product_child2"
               style={{ width: showFilter ? "75%" : "100%" }}

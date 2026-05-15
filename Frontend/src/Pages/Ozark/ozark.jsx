@@ -3,6 +3,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { Api } from "../../Api/Api";
 import "../../App.css";
+import { Breadcrumb } from "../HomePage/BreadCrumb";
 
 const api_calling = async () => {
   const res = await Api("/men");
@@ -14,6 +15,7 @@ export const Ozark = () => {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(0);
   const [expand, setExpand] = useState(true);
+  const [load, setLoad] = useState(true);
   const [colorExpand, setColorExpand] = useState(true);
   const [sizeExpand, setSizeExpand] = useState(true);
   const [originExpand, setOriginExpand] = useState(true);
@@ -24,6 +26,8 @@ export const Ozark = () => {
   const [sort, setSort] = useState("date_old");
 
   useEffect(() => {
+    setLoad(true);
+
     api_calling()
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
@@ -32,7 +36,8 @@ export const Ozark = () => {
   // Filter Function Logic
 
   const highestPrice = Math.max(
-    ...data.map((item) => Number(String(item.price).replace(/,/g, "")), 0),
+    ...data.map((item) => Number(String(item.price).replace(/,/g, ""))),
+    0,
   );
 
   useEffect(() => {
@@ -148,6 +153,13 @@ export const Ozark = () => {
   return (
     <>
       <div className="ozark_product">
+        <Breadcrumb
+          paths={[
+            {
+              name: "Ozark",
+            },
+          ]}
+        />
         <div className="background_img">
           <p className="img_text">ozark adventure shoes</p>
         </div>
@@ -441,7 +453,16 @@ export const Ozark = () => {
 
           {/* Products */}
 
-          {sortedData.length > 0 ? (
+          {load ? (
+            <div
+              className="men_product_child2"
+              style={{ width: showFilter ? "75%" : "100%" }}
+            >
+              <div className="loader_container">
+                <div className="loader"></div>
+              </div>
+            </div>
+          ) : sortedData.length > 0 ? (
             <div
               className="men_product_child2"
               style={{ width: showFilter ? "75%" : "100%" }}
