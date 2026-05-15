@@ -15,6 +15,7 @@ import { Cart } from "./Pages/HomePage/Cart";
 import { Footer } from "./ProductPage/Footer";
 import { Sign_in } from "./Pages/Sign_in/Sign_in";
 import { Login } from "./Pages/Login/Login";
+import { Search } from "./Pages/HomePage/Search";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
+        <Route path="/search" element={<Search />}></Route>
         <Route path="/men" element={<Men />}></Route>
         <Route path="/men_footware" element={<Footware />}></Route>
         <Route path="/men_topware" element={<Topware />}></Route>

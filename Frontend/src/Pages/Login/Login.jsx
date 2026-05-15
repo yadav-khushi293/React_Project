@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 import "../Login/Login.css";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -41,6 +43,10 @@ export const Login = () => {
       if (matchUser) {
         localStorage.setItem("user", JSON.stringify(matchUser));
         alert("Login Successful");
+
+        const redirectPath = location.state?.from || "/";
+
+        navigate(redirectPath);
       } else {
         alert("Invalid Email Or Password! Please Try Again");
       }
