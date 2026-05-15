@@ -4,6 +4,11 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { Api } from "../../Api/Api";
 import "../../App.css";
 
+const api_calling = async () => {
+  const res = await Api("/men");
+  return res;
+};
+
 export const Ozark = () => {
   const [data, setData] = useState([]);
   const [minPrice, setMinPrice] = useState(0);
@@ -19,16 +24,9 @@ export const Ozark = () => {
   const [sort, setSort] = useState("date_old");
 
   useEffect(() => {
-    const api_calling = async () => {
-      try {
-        const res = await Api.get("/ozark");
-        setData(res.data);
-      } catch (error) {
-        console.log("✈️  error: ", error);
-      }
-    };
-
-    api_calling();
+    api_calling()
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
   // Filter Function Logic
@@ -454,10 +452,7 @@ export const Ozark = () => {
                     <i className="bi bi-heart"></i>
                   </div>
 
-                  <div
-                    className="ozark_image"
-                    style={{ cursor: "pointer" }}
-                  >
+                  <div className="ozark_image" style={{ cursor: "pointer" }}>
                     <img src={item.img} alt={item.title} loading="lazy" />
                   </div>
 

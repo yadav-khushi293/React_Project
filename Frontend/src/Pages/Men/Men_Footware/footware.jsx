@@ -4,6 +4,11 @@ import { Api } from "../../../Api/Api";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../../App.css";
 
+const api_calling = async () => {
+  const res = await Api("/men");
+  return res;
+};
+
 export const Footware = () => {
   const [data, setData] = useState([]);
   const [minPrice, setMinPrice] = useState(0);
@@ -19,16 +24,9 @@ export const Footware = () => {
   const [size, setSize] = useState([]);
 
   useEffect(() => {
-    const api_calling = async () => {
-      try {
-        const res = await Api.get("/men");
-        setData(res.data);
-      } catch (error) {
-        console.log("✈️  error: ", error);
-      }
-    };
-
-    api_calling();
+    api_calling()
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
   const men_footwareData = data.filter(
