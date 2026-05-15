@@ -44,7 +44,11 @@ export const Men = () => {
     if (!isLoggedIn) {
       alert("Please Login First");
 
-      navigate("/login");
+      navigate("/login", {
+        state: {
+          from: window.location.pathname,
+        },
+      });
 
       return;
     }

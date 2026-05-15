@@ -1,10 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../App.css";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+    window.location.reload();
+  };
+
   return (
     <div className="navbar">
       <div className="navbar_div1">
@@ -30,13 +41,35 @@ export const Navbar = () => {
           </NavLink>
           <div className="navbar_child4">
             <div className="search">
-              <input type="search" placeholder="What are you looking for?" />
+              <input
+                type="search"
+                placeholder="What are you looking for?"
+                value={search}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setSearch(value);
+                  localStorage.setItem("search", value);
+                  navigate("/search");
+                }}
+              />
               <i className="bi bi-search"></i>
             </div>
             <div className="icons">
-              <NavLink to="/login">
-                <i className="bi bi-person"></i>
-              </NavLink>
+              <div className="profile">
+                {user ? (
+                  <>
+                    <i className="bi bi-person-circle"></i>
+                    {/* <p>{user.firstName}</p> */}
+                    <button onClick={handleLogout}>Logout</button>
+                  </>
+                ) : (
+                  <>
+                    <NavLink to="/login">
+                      <i className="bi bi-person"></i>
+                    </NavLink>
+                  </>
+                )}
+              </div>
               <NavLink to="/cart">
                 <i className="bi bi-bag"></i>
               </NavLink>
@@ -69,7 +102,16 @@ export const Navbar = () => {
             </div>
           </div>
           <div className="search">
-            <input type="search" placeholder="What are you looking for?" />
+            <input
+              type="search"
+              placeholder="What are you looking for?"
+              value={search}
+              onChange={(e) => {
+                const value = e.target.value;
+                setSearch(value);
+                localStorage.setItem("search", value);
+              }}
+            />
             <i className="bi bi-search"></i>
           </div>
         </div>

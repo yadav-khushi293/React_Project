@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import "../Sign_in/Sign_in.css";
 
@@ -8,6 +8,7 @@ export const Sign_in = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -41,6 +42,7 @@ export const Sign_in = () => {
 
     if (existUser) {
       alert("Email Already Exists!");
+      navigate("/login");
       return;
     }
 
@@ -60,7 +62,8 @@ export const Sign_in = () => {
         body: JSON.stringify(userObj),
       });
       if (res.ok) {
-        alert("Account Created");
+        alert("Account Created Successfully!");
+        navigate("/login");
       }
     } catch (error) {
       console.log("✈️  error: ", error);
