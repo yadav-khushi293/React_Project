@@ -465,12 +465,12 @@ export const Men = () => {
           </div>
 
           {sortedData.length > 0 ? (
-            <div
+            <div 
               className="men_product_child2"
               style={{ width: showFilter ? "75%" : "100%" }}
             >
               {sortedData.map((item) => (
-                <div className="men_product_card" key={item.id}>
+                <div className="men_product_card" key={item.id} to={`/singlePage/${item.id}`}>
                   <div className="heart_list">
                     <i className="bi bi-heart"></i>
                   </div>
