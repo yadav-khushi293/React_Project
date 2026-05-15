@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
+import { Api } from "../../../Api/Api";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../../App.css";
 
@@ -18,16 +17,11 @@ export const Footware = () => {
   const [color, setColor] = useState([]);
   const [origin, setOrigin] = useState([]);
   const [size, setSize] = useState([]);
-  const navigate = useNavigate();
-
-  const Cartapi = "https://react-project-1s4c.onrender.com/cart";
 
   useEffect(() => {
     const api_calling = async () => {
       try {
-        const res = await axios.get(
-          "https://react-project-1s4c.onrender.com/men",
-        );
+        const res = await Api.get("/men");
         setData(res.data);
       } catch (error) {
         console.log("✈️  error: ", error);
@@ -36,45 +30,6 @@ export const Footware = () => {
 
     api_calling();
   }, []);
-
-  // Add to Cart Function
-  const handleAddToCart = async (item) => {
-    const isLoggedIn = localStorage.getItem("user");
-
-    if (!isLoggedIn) {
-      alert("Please Login First");
-
-      navigate("/login");
-
-      return;
-    }
-
-    const cartObj = {
-      id: item.id,
-      title: item.title,
-      img: item.img,
-      price: item.price,
-    };
-
-    try {
-      const res = await fetch(Cartapi, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cartObj),
-      });
-
-      if (res.ok) {
-        localStorage.setItem("selectedProductId", item.id);
-        navigate("/page");
-      } else {
-        console.log("Failed to add to cart");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const men_footwareData = data.filter(
     (item) => item.category === "men_footware",
@@ -482,11 +437,7 @@ export const Footware = () => {
                     <i className="bi bi-heart"></i>
                   </div>
 
-                  <div
-                    className="men_image"
-                    onClick={() => handleAddToCart(item)}
-                    style={{ cursor: "pointer" }}
-                  >
+                  <div className="men_image" style={{ cursor: "pointer" }}>
                     <img src={item.img} alt={item.title} loading="lazy" />
                   </div>
 
