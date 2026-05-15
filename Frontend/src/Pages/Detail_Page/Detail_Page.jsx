@@ -43,7 +43,9 @@ export const Page = () => {
   const selectedProductId = localStorage.getItem("selectedProductId");
 
   // matching product find karna
-  const product = data.find((p) => p.id == selectedProductId);
+  const product = data.find(
+    (p) => p.id == selectedProductId
+  );
 
   // increment
   const handleIncrement = () => {
@@ -67,7 +69,9 @@ export const Page = () => {
 
   // total price
   const totalPrice = product
-    ? parseFloat(product.price.toString().replace(/,/g, "")) * quantity
+    ? parseFloat(
+        product.price.toString().replace(/,/g, "")
+      ) * quantity
     : 0;
 
   return (

@@ -289,7 +289,7 @@ export const HomePage = () => {
       </div>
 
       {/* Last Banner */}
-
+     
       <img
         src="/Utilis/Down_Banner.jpg"
         alt="Last Banner"
@@ -316,3 +316,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+

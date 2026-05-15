@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "../ProductPage/ProdectPages.css";
 import axios from "axios";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { useNavigate } from "react-router-dom";
+
 export const ProdectPages = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
+
+  const Cartapi = "https://react-project-1s4c.onrender.com/cart";
 
   useEffect(() => {
     const api_calling = async () => {
       try {
         const res = await axios.get(
-          "https://react-project-1s4c.onrender.com/women"
+          "https://react-project-1s4c.onrender.com/women",
         );
         setData(res.data);
       } catch (error) {
@@ -19,6 +24,50 @@ export const ProdectPages = () => {
 
     api_calling();
   }, []);
+
+  // Add to Cart Function
+
+  const handleAddToCart = async (item) => {
+    const isLoggedIn = localStorage.getItem("user");
+
+    if (!isLoggedIn) {
+      alert("Please Login First");
+
+      navigate("/login", {
+        state: {
+          from: window.location.pathname,
+        },
+      });
+
+      return;
+    }
+
+    const cartObj = {
+      id: item.id,
+      title: item.title,
+      img: item.img,
+      price: item.price,
+    };
+
+    try {
+      const res = await fetch(Cartapi, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartObj),
+      });
+
+      if (res.ok) {
+        localStorage.setItem("selectedProductId", item.id);
+        navigate("/Cart");
+      } else {
+        console.log("Failed to add to cart");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -61,7 +110,12 @@ export const ProdectPages = () => {
         <div className="product-container">
           {data.map((item) => (
             <div className="product-card" key={item.id}>
-              <div className="image-box">
+              {/*Image Click = Add to Cart */}
+              <div
+                className="image-box"
+                onClick={() => handleAddToCart(item)}
+                style={{ cursor: "pointer" }}
+              >
                 <img src={item.img} alt={item.title} />
               </div>
 

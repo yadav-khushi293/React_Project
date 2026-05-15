@@ -106,11 +106,8 @@ export const Accessories = () => {
           {data.map((item) => (
             <div className="product-card" key={item.id}>
               {/*Image Click = Add to Cart */}
-              <div
-                className="image-box"
-                onClick={() => handleAddToCart(item)}
-                style={{ cursor: "pointer" }}
-              >
+              
+              <div className="image-box" onClick={() => handleAddToCart(item)}style={{ cursor: "pointer" }}>
                 <img src={item.img} alt={item.title} />
               </div>
 
