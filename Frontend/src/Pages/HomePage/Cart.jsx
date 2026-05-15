@@ -3,6 +3,8 @@ import React from "react";
 import axios from "axios";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+import "./Cart.css";
+
 export const Cart = () => {
   const [data, setData] = useState([]);
 

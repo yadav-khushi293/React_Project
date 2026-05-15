@@ -67,7 +67,7 @@ export const Footware = () => {
 
       if (res.ok) {
         localStorage.setItem("selectedProductId", item.id);
-        navigate("/Page");
+        navigate("/page");
       } else {
         console.log("Failed to add to cart");
       }

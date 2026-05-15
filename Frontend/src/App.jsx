@@ -16,6 +16,7 @@ import { Footer } from "./ProductPage/Footer";
 import { Sign_in } from "./Pages/Sign_in/Sign_in";
 import { Login } from "./Pages/Login/Login";
 import { Search } from "./Pages/HomePage/Search";
+import { Page } from "./Pages/Detail_Page/Detail_Page";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign_in" element={<Sign_in />}></Route>
+        <Route path="/page" element={<Page />}></Route>
       </Routes>
 
       {/* <Footer /> */}

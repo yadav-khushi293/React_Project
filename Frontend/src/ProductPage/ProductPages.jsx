@@ -60,7 +60,7 @@ export const ProdectPages = () => {
 
       if (res.ok) {
         localStorage.setItem("selectedProductId", item.id);
-        navigate("/Cart");
+        navigate("/page");
       } else {
         console.log("Failed to add to cart");
       }
